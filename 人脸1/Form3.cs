@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DBHelpers;
 
 namespace 人脸1
 {
@@ -58,26 +58,24 @@ namespace 人脸1
             if (judgeVaild() == "")
             {
 
-                string sql = "insert into 人脸数据 (姓名,编号,性别,身份证号) values(@姓名,@编号,@性别,@身份证号)";
+                string sql = "insert into FaceData (姓名,编号,性别,身份证号) values(@姓名,@编号,@性别,@身份证号)";
                 List<SqlParameter> paras = new List<SqlParameter>();
                 paras.Add(new SqlParameter("@姓名", textBox4.Text.Trim()));
                 paras.Add(new SqlParameter("@编号", textBox3.Text.Trim()));
-                paras.Add(new SqlParameter("@性别", radioButton1.Text.Trim()));
-                paras.Add(new SqlParameter("@身份证号", textBox1.Text.Trim()));
-                string ConStr = "Data Source=(local);Initial Catalog=Test;Integrated Security=True";//用的是windows用户验证  好吧我把sql 身份验证密码忘了
-                SqlConnection conn = new SqlConnection(ConStr);
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddRange(paras.ToArray());
-                if (conn.State != ConnectionState.Open)
-                {
-                    MessageBox.Show("连接数据库失败");
-                }
            
+                paras.Add(new SqlParameter("@身份证号", textBox1.Text.Trim()));
+                if (radioButtonMale.Checked)
+                {
+                    paras.Add(new SqlParameter("@性别", true));
+                }
                 else
                 {
-                    MessageBox.Show("注册成功");
+                    paras.Add(new SqlParameter("@性别", false));
                 }
+                SqlCommand cmd = new SqlCommand(sql);
+                cmd.Parameters.AddRange(paras.ToArray());
+                var db = new DBHelper("MyCN");
+                db.ExecuteNonQuery(cmd);
             }
         }
         public bool UserNameIsExist(string Name)

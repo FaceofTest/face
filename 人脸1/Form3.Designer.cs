@@ -33,8 +33,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonMale = new System.Windows.Forms.RadioButton();
+            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -103,29 +103,29 @@
             this.label5.Text = "身份证号：";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // radioButton1
+            // radioButtonMale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Location = new System.Drawing.Point(163, 127);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(39, 18);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "男";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButtonMale.AutoSize = true;
+            this.radioButtonMale.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonMale.Location = new System.Drawing.Point(163, 127);
+            this.radioButtonMale.Name = "radioButtonMale";
+            this.radioButtonMale.Size = new System.Drawing.Size(39, 18);
+            this.radioButtonMale.TabIndex = 7;
+            this.radioButtonMale.TabStop = true;
+            this.radioButtonMale.Text = "男";
+            this.radioButtonMale.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // radioButtonFemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Location = new System.Drawing.Point(234, 127);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 18);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "女";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.radioButtonFemale.AutoSize = true;
+            this.radioButtonFemale.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonFemale.Location = new System.Drawing.Point(234, 127);
+            this.radioButtonFemale.Name = "radioButtonFemale";
+            this.radioButtonFemale.Size = new System.Drawing.Size(39, 18);
+            this.radioButtonFemale.TabIndex = 8;
+            this.radioButtonFemale.TabStop = true;
+            this.radioButtonFemale.Text = "女";
+            this.radioButtonFemale.UseVisualStyleBackColor = false;
             // 
             // textBox3
             // 
@@ -179,8 +179,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonFemale);
+            this.Controls.Add(this.radioButtonMale);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -204,8 +204,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonMale;
+        private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
