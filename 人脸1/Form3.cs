@@ -55,14 +55,19 @@ namespace 人脸1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int num = 0;//为了确定是否向数据库输入信息成功
+            string pathName = openFileDialog1.FileName;
+            FileStream fs = new FileStream(pathName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+            byte[] buffByte = new byte[fs.Length];
+            fs.Read(buffByte, 0, (int)fs.Length);
+            fs.Close();
             if (judgeVaild() == "")
             {
 
-                string sql = "insert into FaceData (姓名,编号,性别,身份证号) values(@姓名,@编号,@性别,@身份证号)";
-                List<SqlParameter> paras = new List<SqlParameter>();
+                string sql = "insert into FaceData (姓名,编号,性别,身份证号,照片) values(@姓名,@编号,@性别,@身份证号,@照片)";//往数据库FaceDate中插入数据
+                List<SqlParameter> paras = new List<SqlParameter>(); 
                 paras.Add(new SqlParameter("@姓名", textBox4.Text.Trim()));
                 paras.Add(new SqlParameter("@编号", textBox3.Text.Trim()));
-           
                 paras.Add(new SqlParameter("@身份证号", textBox1.Text.Trim()));
                 if (radioButtonMale.Checked)
                 {
@@ -72,10 +77,35 @@ namespace 人脸1
                 {
                     paras.Add(new SqlParameter("@性别", false));
                 }
-                SqlCommand cmd = new SqlCommand(sql);
-                cmd.Parameters.AddRange(paras.ToArray());
+                if (pictureBox1.Image != null)
+                {
+                    if (pictureBox1.ImageLocation == null) 
+                    {
+                        paras.Add(new SqlParameter("@照片", DBNull.Value));
+                    }
+                      
+                    else {
+                        paras.Add(new SqlParameter("@照片",pictureBox1.ImageLocation));
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("照片不能为空","提示");
+                }
+                SqlCommand cmd = new SqlCommand(sql);//执行sql语句
+                cmd.Parameters.AddRange(paras.ToArray());//添加
                 var db = new DBHelper("MyCN");
+                num++;
                 db.ExecuteNonQuery(cmd);
+                if (num != 0)
+                {
+                    MessageBox.Show("注册成功", "提示");
+                }
+                else {
+                    MessageBox.Show("注册失败", "提示");
+                }
+                
+                
             }
         }
         public bool UserNameIsExist(string Name)
@@ -121,6 +151,37 @@ namespace 人脸1
              }
             MessageBox.Show("注册成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.None);*/
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        { 
+            String dir = @System.Environment.CurrentDirectory;
+            openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = dir;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                
+                try
+                {
+                    this.pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+                    pictureBox1.ImageLocation = @openFileDialog1.FileName; 
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
 
