@@ -34,7 +34,7 @@ namespace 人脸1
             {
                 this.Close();
                 //到这里了
-                Form2 form2 = new Form2();
+                FormQuery form2 = new FormQuery();
                 form2.Show();
             }
             

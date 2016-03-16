@@ -12,9 +12,9 @@ using DBHelpers;
 
 namespace 人脸1
 {
-    public partial class Form2 : Form
+    public partial class FormQuery : Form
     {
-        public Form2()
+        public FormQuery()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace 人脸1
 {
-    partial class Form2
+    partial class FormQuery
     {
         /// <summary>
         /// Required designer variable.
