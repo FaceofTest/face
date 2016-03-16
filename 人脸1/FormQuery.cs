@@ -42,34 +42,42 @@ namespace 人脸1
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            if(comboBox1.Text == "姓名")
+            string condition = comboBoxCondition.Text;
+            switch (condition)
             {
-                string name = textBoxContent.Text.Trim();
-                
-                if (string.IsNullOrWhiteSpace(name))
-                {
-                    MessageBox.Show("请输入姓名","提示");
-                }     
-                else
-                {
-                    string sqlStr = "select 姓名 from FaceData where 姓名='name' ";
-                    SqlCommand cmd = new SqlCommand(sqlStr);//执行sql语句
-
-                    var db = new DBHelper("MyCN");    
-                    //MessageBox.Show("" + cmd.ExecuteScalar().ToString(), "提示");
-                    Form4 form4 = new Form4();
-                    //db.ExecuteNonQuery(cmd);
-                   var dataTable = db.ExecuteDataTable(cmd);
-
-                   MessageBox.Show("" + dataTable, "提示");
-                 //   form4.textBox4.Text = cmd.ExecuteScalar().ToString(); ;
-                }
+                case "姓名":
+                    QueryByName();
+                    break;
+                default:
+                    break;
             }
-
-           
         }
 
-     
+        private void QueryByName()
+        {
+
+            string name = textBoxContent.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                MessageBox.Show("请输入姓名", "提示");
+            }
+            else
+            {
+                string commandText = @"select * from FaceData where 姓名=@Name ";
+                SqlParameter sqlParamater = new SqlParameter("@Name",SqlDbType.NVarChar) 
+                {
+                    Value = name
+                };
+                SqlCommand cmd = new SqlCommand(commandText);//执行sql语句
+                cmd.Parameters.Add(sqlParamater);
+                var db = new DBHelper("MyCN");
+                var dataTable = db.ExecuteDataTable(cmd);
+                dataGridView1.DataSource = dataTable;
+                Console.WriteLine(dataTable.Rows.Count);
+                Form4 form4 = new Form4();
+            }
         }
+
+    }
 }

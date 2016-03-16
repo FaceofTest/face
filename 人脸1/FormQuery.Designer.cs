@@ -35,10 +35,12 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.labelQuery = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCondition = new System.Windows.Forms.ComboBox();
             this.labelQueryAll = new System.Windows.Forms.Label();
             this.buttonConfirmAll = new System.Windows.Forms.Button();
             this.buttonCancelAll = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,17 +102,17 @@
             this.labelQuery.TabIndex = 18;
             this.labelQuery.Text = "查找：";
             // 
-            // comboBox1
+            // comboBoxCondition
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxCondition.FormattingEnabled = true;
+            this.comboBoxCondition.Items.AddRange(new object[] {
             "姓名",
             "身份证号",
             "编号"});
-            this.comboBox1.Location = new System.Drawing.Point(39, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(78, 20);
-            this.comboBox1.TabIndex = 19;
+            this.comboBoxCondition.Location = new System.Drawing.Point(39, 19);
+            this.comboBoxCondition.Name = "comboBoxCondition";
+            this.comboBoxCondition.Size = new System.Drawing.Size(78, 20);
+            this.comboBoxCondition.TabIndex = 19;
             // 
             // labelQueryAll
             // 
@@ -143,15 +145,25 @@
             this.buttonCancelAll.UseVisualStyleBackColor = true;
             this.buttonCancelAll.Click += new System.EventHandler(this.button4_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 152);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(588, 150);
+            this.dataGridView1.TabIndex = 23;
+            // 
             // FormQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 151);
+            this.ClientSize = new System.Drawing.Size(612, 314);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonCancelAll);
             this.Controls.Add(this.buttonConfirmAll);
             this.Controls.Add(this.labelQueryAll);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCondition);
             this.Controls.Add(this.labelQuery);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonCancel);
@@ -161,6 +173,7 @@
             this.Name = "FormQuery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "查询信息";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,9 +188,10 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelQuery;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCondition;
         private System.Windows.Forms.Label labelQueryAll;
         private System.Windows.Forms.Button buttonConfirmAll;
         private System.Windows.Forms.Button buttonCancelAll;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
