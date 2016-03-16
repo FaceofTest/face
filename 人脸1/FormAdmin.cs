@@ -20,22 +20,22 @@ namespace 人脸1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String num = textBox1.Text;
-            String password = textBox2.Text;
-            if (num != "1111111")
+            string id = textBoxId.Text;
+            string password = textBoxPassword.Text;
+            if (id.Equals("1111111") == false)
             {
-                MessageBox.Show("输入用户编号错误", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                if (password != "1111111")
+                MessageBox.Show("输入用户编号错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (password.Equals("1111111") == false)
                 {
-                    MessageBox.Show("输入用户密码错误", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    MessageBox.Show("输入用户密码错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
                 this.Close();
                 //到这里了
-               Form2 form2 = new Form2();
-               form2.Show();
+                Form2 form2 = new Form2();
+                form2.Show();
             }
             
                
