@@ -1,6 +1,6 @@
 ﻿namespace 人脸1
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("导入考勤数据");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("导出考勤数据");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("备份数据库");
