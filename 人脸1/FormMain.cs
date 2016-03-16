@@ -46,7 +46,7 @@ namespace 人脸1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form6 from6 = new Form6();
+            FormAdmin from6 = new FormAdmin();
             from6.Show();
         }
 
@@ -65,7 +65,7 @@ namespace 人脸1
 
         private void 查询信息_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
+            FormAdmin form6 = new FormAdmin();
             form6.Show();
         }
 

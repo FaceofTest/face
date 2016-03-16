@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace 人脸1
 {
-    public partial class Form6 : Form
+    public partial class FormAdmin : Form
     {
-        public Form6()
+        public FormAdmin()
         {
             InitializeComponent();
         }
