@@ -30,15 +30,15 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBoxContent = new System.Windows.Forms.TextBox();
+            this.buttonQuery = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelQuery = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.labelQueryAll = new System.Windows.Forms.Label();
+            this.buttonConfirmAll = new System.Windows.Forms.Button();
+            this.buttonCancelAll = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -52,34 +52,34 @@
             this.label1.Text = "按";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // textBoxContent
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 21);
-            this.textBox1.TabIndex = 3;
+            this.textBoxContent.Location = new System.Drawing.Point(169, 20);
+            this.textBoxContent.Name = "textBoxContent";
+            this.textBoxContent.Size = new System.Drawing.Size(155, 21);
+            this.textBoxContent.TabIndex = 3;
             // 
-            // button1
+            // buttonQuery
             // 
-            this.button1.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(249, 68);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "查找";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonQuery.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonQuery.Location = new System.Drawing.Point(249, 68);
+            this.buttonQuery.Name = "buttonQuery";
+            this.buttonQuery.Size = new System.Drawing.Size(75, 23);
+            this.buttonQuery.TabIndex = 6;
+            this.buttonQuery.Text = "查找";
+            this.buttonQuery.UseVisualStyleBackColor = true;
+            this.buttonQuery.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // buttonCancel
             // 
-            this.button2.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(249, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "取消";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonCancel.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonCancel.Location = new System.Drawing.Point(249, 97);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 7;
+            this.buttonCancel.Text = "取消";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -90,15 +90,15 @@
             this.label5.Size = new System.Drawing.Size(2, 114);
             this.label5.TabIndex = 9;
             // 
-            // label2
+            // labelQuery
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(114, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "查找：";
+            this.labelQuery.AutoSize = true;
+            this.labelQuery.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
+            this.labelQuery.Location = new System.Drawing.Point(114, 22);
+            this.labelQuery.Name = "labelQuery";
+            this.labelQuery.Size = new System.Drawing.Size(49, 13);
+            this.labelQuery.TabIndex = 18;
+            this.labelQuery.Text = "查找：";
             // 
             // comboBox1
             // 
@@ -112,53 +112,53 @@
             this.comboBox1.Size = new System.Drawing.Size(78, 20);
             this.comboBox1.TabIndex = 19;
             // 
-            // label3
+            // labelQueryAll
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(350, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "查看员工全部信息";
+            this.labelQueryAll.AutoSize = true;
+            this.labelQueryAll.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
+            this.labelQueryAll.Location = new System.Drawing.Point(350, 26);
+            this.labelQueryAll.Name = "labelQueryAll";
+            this.labelQueryAll.Size = new System.Drawing.Size(119, 13);
+            this.labelQueryAll.TabIndex = 20;
+            this.labelQueryAll.Text = "查看员工全部信息";
             // 
-            // button3
+            // buttonConfirmAll
             // 
-            this.button3.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(394, 68);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "确定";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonConfirmAll.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonConfirmAll.Location = new System.Drawing.Point(394, 68);
+            this.buttonConfirmAll.Name = "buttonConfirmAll";
+            this.buttonConfirmAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonConfirmAll.TabIndex = 21;
+            this.buttonConfirmAll.Text = "确定";
+            this.buttonConfirmAll.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonCancelAll
             // 
-            this.button4.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(394, 97);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "取消";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonCancelAll.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonCancelAll.Location = new System.Drawing.Point(394, 97);
+            this.buttonCancelAll.Name = "buttonCancelAll";
+            this.buttonCancelAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelAll.TabIndex = 22;
+            this.buttonCancelAll.Text = "取消";
+            this.buttonCancelAll.UseVisualStyleBackColor = true;
+            this.buttonCancelAll.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Form2
+            // FormQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 151);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.buttonCancelAll);
+            this.Controls.Add(this.buttonConfirmAll);
+            this.Controls.Add(this.labelQueryAll);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelQuery);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonQuery);
+            this.Controls.Add(this.textBoxContent);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "FormQuery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "查询信息";
             this.ResumeLayout(false);
@@ -170,14 +170,14 @@
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBoxContent;
+        private System.Windows.Forms.Button buttonQuery;
+        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelQuery;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label labelQueryAll;
+        private System.Windows.Forms.Button buttonConfirmAll;
+        private System.Windows.Forms.Button buttonCancelAll;
     }
 }

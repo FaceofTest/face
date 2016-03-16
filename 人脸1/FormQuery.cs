@@ -45,7 +45,7 @@ namespace 人脸1
            
             if(comboBox1.Text == "姓名")
             {
-                string name = textBox1.Text.Trim();
+                string name = textBoxContent.Text.Trim();
                 
                 if (string.IsNullOrWhiteSpace(name))
                 {
