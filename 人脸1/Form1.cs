@@ -50,13 +50,7 @@ namespace 人脸1
             from6.Show();
         }
 
-        private void 指纹识别_Click(object sender, EventArgs e)
-        {
-            Form4 form4 = new Form4();
-            form4.Show();
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+           private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr = MessageBox.Show("是否退出人脸管理考勤程序", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
@@ -219,6 +213,11 @@ namespace 人脸1
         {
             Form24 form24 = new Form24();
             form24.Show();
+        }
+
+        private void 退出系统_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         
