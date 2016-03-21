@@ -29,7 +29,7 @@ namespace 人脸1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Register form3 = new Register();
             form3.Show();
         }
 
@@ -46,8 +46,8 @@ namespace 人脸1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormAdmin from6 = new FormAdmin();
-            from6.Show();
+            Manage ma = new Manage();
+            ma.Show();
         }
 
            private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -65,29 +65,14 @@ namespace 人脸1
 
         private void 查询信息_Click(object sender, EventArgs e)
         {
-            FormAdmin form6 = new FormAdmin();
-            form6.Show();
+            FormQuery form2 = new FormQuery();
+            form2.Show();
         }
 
         private void 初始化系统IToolStripMenuItem_Click(object sender, EventArgs e)
         {
              MessageBox.Show("初始化系统将清除已经登记的所有数据，是否确认清除", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk
                  );
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void 清除过期数据TToolStripMenuItem_Click(object sender, EventArgs e)
@@ -220,7 +205,25 @@ namespace 人脸1
             this.Close();
         }
 
-        
+        private void 断开设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 关于考勤管理系统ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutSys absys = new AboutSys();
+            absys.Show();
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (treeView1.Nodes[2].Nodes[3].IsSelected == true)
+            {
+                Form17 form17 = new Form17();
+                form17.Show();
+            }
+        }     
 
   
     }

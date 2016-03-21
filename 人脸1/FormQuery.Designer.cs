@@ -40,6 +40,7 @@
             this.buttonConfirmAll = new System.Windows.Forms.Button();
             this.buttonCancelAll = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,6 +134,7 @@
             this.buttonConfirmAll.TabIndex = 21;
             this.buttonConfirmAll.Text = "确定";
             this.buttonConfirmAll.UseVisualStyleBackColor = true;
+            this.buttonConfirmAll.Click += new System.EventHandler(this.buttonConfirmAll_Click);
             // 
             // buttonCancelAll
             // 
@@ -147,18 +149,30 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 152);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 143);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(588, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(606, 207);
             this.dataGridView1.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(12, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "结果：";
             // 
             // FormQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 314);
+            this.ClientSize = new System.Drawing.Size(612, 352);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonCancelAll);
             this.Controls.Add(this.buttonConfirmAll);
@@ -193,5 +207,6 @@
         private System.Windows.Forms.Button buttonConfirmAll;
         private System.Windows.Forms.Button buttonCancelAll;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -586,6 +586,7 @@
             this.断开设置ToolStripMenuItem.Name = "断开设置ToolStripMenuItem";
             this.断开设置ToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.断开设置ToolStripMenuItem.Text = "断开设置";
+            this.断开设置ToolStripMenuItem.Click += new System.EventHandler(this.断开设置ToolStripMenuItem_Click);
             // 
             // toolStripSeparator11
             // 
@@ -685,6 +686,7 @@
             this.关于考勤管理系统ToolStripMenuItem.Name = "关于考勤管理系统ToolStripMenuItem";
             this.关于考勤管理系统ToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.关于考勤管理系统ToolStripMenuItem.Text = "关于考勤管理系统";
+            this.关于考勤管理系统ToolStripMenuItem.Click += new System.EventHandler(this.关于考勤管理系统ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -993,7 +995,6 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(950, 566);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // 设置名称
             // 
@@ -1139,7 +1140,7 @@
             this.对比方式.HeaderText = "对比方式";
             this.对比方式.Name = "对比方式";
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1154,7 +1155,7 @@
             this.Font = new System.Drawing.Font("宋体", 9F);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "人脸管理考勤程序";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
