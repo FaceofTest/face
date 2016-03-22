@@ -121,7 +121,6 @@
             this.同步设置时间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助HToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.查看帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.查看人脸说明CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.检查新版本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
@@ -643,7 +642,6 @@
             // 
             this.帮助HToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.查看帮助HToolStripMenuItem,
-            this.查看人脸说明CToolStripMenuItem,
             this.toolStripSeparator14,
             this.检查新版本ToolStripMenuItem,
             this.toolStripSeparator15,
@@ -658,12 +656,6 @@
             this.查看帮助HToolStripMenuItem.Name = "查看帮助HToolStripMenuItem";
             this.查看帮助HToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.查看帮助HToolStripMenuItem.Text = "系统帮助（&H）";
-            // 
-            // 查看人脸说明CToolStripMenuItem
-            // 
-            this.查看人脸说明CToolStripMenuItem.Name = "查看人脸说明CToolStripMenuItem";
-            this.查看人脸说明CToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.查看人脸说明CToolStripMenuItem.Text = "打开全部启动提示";
             // 
             // toolStripSeparator14
             // 
@@ -1194,7 +1186,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 帮助HToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 查看帮助HToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 查看人脸说明CToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
