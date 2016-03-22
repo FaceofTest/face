@@ -142,13 +142,13 @@ namespace 人脸1
 
         private void 当前在岗情况CtrlCToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form15 form15 = new Form15();
+            workQuery form15 = new workQuery();
             form15.Show();
         }
 
         private void 系统操作日志ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form16 form16 = new Form16();
+            LogofSystem form16 = new LogofSystem();
             form16.Show();
         }
 
