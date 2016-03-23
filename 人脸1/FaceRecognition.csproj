@@ -323,13 +323,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="信息.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\csharpfacecore-master\faceView\faceView.csproj">
       <Project>{bcea3c32-dd73-4dee-abd3-86cc1df8a2fb}</Project>
       <Name>faceView</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="系统帮助.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

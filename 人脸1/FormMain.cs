@@ -223,6 +223,16 @@ namespace 人脸1
                 Form17 form17 = new Form17();
                 form17.Show();
             }
+        }
+
+        private void 检查新版本ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("已是最新版本","提示");
+        }
+
+        private void 查看帮助HToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }     
 
   
