@@ -136,7 +136,7 @@ namespace 人脸1
 
         private void 出勤记录ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form14 form14 = new Form14();
+            Record form14 = new Record();
             form14.Show();
         }
 
@@ -154,7 +154,7 @@ namespace 人脸1
 
         private void 部门管理DToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form17 form17 = new Form17();
+            DivisionalManagement form17 = new DivisionalManagement();
             form17.Show();
         }
 
@@ -220,7 +220,7 @@ namespace 人脸1
         {
             if (treeView1.Nodes[2].Nodes[3].IsSelected == true)
             {
-                Form17 form17 = new Form17();
+                DivisionalManagement form17 = new DivisionalManagement();
                 form17.Show();
             }
         }
@@ -232,9 +232,19 @@ namespace 人脸1
 
         private void 查看帮助HToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Process.Start(@"系统帮助.txt");
+        }
 
+
+        private void 统计报表ToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("没有数据设置", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Checkcompute cc = new Checkcompute();
+                cc.Show();
+            }
+        
         }     
-
   
     }
    

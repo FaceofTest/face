@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace 人脸1
 {
-    public partial class Form17 : Form
+    public partial class Alterlog : Form
     {
-        public Form17()
+        public Alterlog()
         {
             InitializeComponent();
         }

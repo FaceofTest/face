@@ -22,6 +22,11 @@ namespace 人脸1
             this.Close();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("王伏注意  这里是要生成报表的","提示");
+        }
+
       
     }
 }

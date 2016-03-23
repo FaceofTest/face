@@ -54,11 +54,23 @@
     <Compile Include="AboutSys.Designer.cs">
       <DependentUpon>AboutSys.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alterlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alterlog.Designer.cs">
+      <DependentUpon>Alterlog.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangeMessage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChangeMessage.Designer.cs">
       <DependentUpon>ChangeMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checkcompute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkcompute.Designer.cs">
+      <DependentUpon>Checkcompute.cs</DependentUpon>
     </Compile>
     <Compile Include="DelMessage.cs">
       <SubType>Form</SubType>
@@ -96,11 +108,11 @@
     <Compile Include="Form13.Designer.cs">
       <DependentUpon>Form13.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form14.cs">
+    <Compile Include="Record.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form14.Designer.cs">
-      <DependentUpon>Form14.cs</DependentUpon>
+    <Compile Include="Record.Designer.cs">
+      <DependentUpon>Record.cs</DependentUpon>
     </Compile>
     <Compile Include="workQuery.cs">
       <SubType>Form</SubType>
@@ -114,11 +126,11 @@
     <Compile Include="LogofSystem.Designer.cs">
       <DependentUpon>LogofSystem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form17.cs">
+    <Compile Include="DivisionalManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form17.Designer.cs">
-      <DependentUpon>Form17.cs</DependentUpon>
+    <Compile Include="DivisionalManagement.Designer.cs">
+      <DependentUpon>DivisionalManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Form18.cs">
       <SubType>Form</SubType>
@@ -214,8 +226,14 @@
     <EmbeddedResource Include="AboutSys.resx">
       <DependentUpon>AboutSys.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alterlog.resx">
+      <DependentUpon>Alterlog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangeMessage.resx">
       <DependentUpon>ChangeMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkcompute.resx">
+      <DependentUpon>Checkcompute.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DelMessage.resx">
       <DependentUpon>DelMessage.cs</DependentUpon>
@@ -235,8 +253,8 @@
     <EmbeddedResource Include="Form13.resx">
       <DependentUpon>Form13.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form14.resx">
-      <DependentUpon>Form14.cs</DependentUpon>
+    <EmbeddedResource Include="Record.resx">
+      <DependentUpon>Record.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="workQuery.resx">
       <DependentUpon>workQuery.cs</DependentUpon>
@@ -244,8 +262,8 @@
     <EmbeddedResource Include="LogofSystem.resx">
       <DependentUpon>LogofSystem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form17.resx">
-      <DependentUpon>Form17.cs</DependentUpon>
+    <EmbeddedResource Include="DivisionalManagement.resx">
+      <DependentUpon>DivisionalManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form18.resx">
       <DependentUpon>Form18.cs</DependentUpon>
@@ -330,9 +348,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="系统帮助.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

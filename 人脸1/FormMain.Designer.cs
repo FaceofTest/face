@@ -29,40 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("导入考勤数据");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("导出考勤数据");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("备份数据库");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("数据管理", new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode21,
-            treeNode22});
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("设备管理");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("有关设备操作", new System.Windows.Forms.TreeNode[] {
-            treeNode24,
-            treeNode25,
-            treeNode26,
-            treeNode27});
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("管理员设置");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("人员维护");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("数据库设置");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("部门表");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("设备/维护", new System.Windows.Forms.TreeNode[] {
-            treeNode29,
-            treeNode30,
-            treeNode31,
-            treeNode32});
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("时间段维护");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("人员排班");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("班次管理");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("考勤规则");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("人员排班", new System.Windows.Forms.TreeNode[] {
-            treeNode34,
-            treeNode35,
-            treeNode36,
-            treeNode37});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("导入考勤数据");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("导出考勤数据");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("备份数据库");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("数据管理", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("设备管理");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("有关设备操作", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("管理员设置");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("人员维护");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("数据库设置");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("部门表");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("设备/维护", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13});
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("时间段维护");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("人员排班");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("班次管理");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("考勤规则");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("人员排班", new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18});
             this.人脸注册 = new System.Windows.Forms.Button();
             this.面部识别 = new System.Windows.Forms.Button();
             this.指纹识别 = new System.Windows.Forms.Button();
@@ -427,6 +427,7 @@
             this.统计报表ToolStripMenuItem.Name = "统计报表ToolStripMenuItem";
             this.统计报表ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.统计报表ToolStripMenuItem.Text = "统计报表";
+            this.统计报表ToolStripMenuItem.Click += new System.EventHandler(this.统计报表ToolStripMenuItem_Click_1);
             // 
             // toolStripSeparator7
             // 
@@ -823,53 +824,53 @@
             this.treeView1.LineColor = System.Drawing.Color.Maroon;
             this.treeView1.Location = new System.Drawing.Point(3, 12);
             this.treeView1.Name = "treeView1";
-            treeNode20.Name = "导入考勤数据";
-            treeNode20.Text = "导入考勤数据";
-            treeNode21.Name = "导出考勤数据";
-            treeNode21.Text = "导出考勤数据";
-            treeNode22.Name = "备份数据库";
-            treeNode22.Text = "备份数据库";
-            treeNode23.ForeColor = System.Drawing.Color.Blue;
-            treeNode23.Name = "节点0";
-            treeNode23.Text = "数据管理";
-            treeNode24.Name = "从设备下载记录数据";
-            treeNode24.Text = "从设备下载记录数据";
-            treeNode25.Name = "从设备下载人员信息";
-            treeNode25.Text = "从设备下载记录数据";
-            treeNode26.Name = "上传人员信息到设备";
-            treeNode26.Text = "从设备下载记录数据";
-            treeNode27.Name = "设备管理";
-            treeNode27.Text = "设备管理";
-            treeNode28.ForeColor = System.Drawing.Color.Blue;
-            treeNode28.Name = "有关设备操作";
-            treeNode28.Text = "有关设备操作";
-            treeNode29.Name = "管理员设置";
-            treeNode29.Text = "管理员设置";
-            treeNode30.Name = "人员维护";
-            treeNode30.Text = "人员维护";
-            treeNode31.Name = "数据库设置";
-            treeNode31.Text = "数据库设置";
-            treeNode32.Name = "部门表";
-            treeNode32.Text = "部门表";
-            treeNode33.ForeColor = System.Drawing.Color.Blue;
-            treeNode33.Name = "设备/维护";
-            treeNode33.Text = "设备/维护";
-            treeNode34.Name = "时间段维护";
-            treeNode34.Text = "时间段维护";
-            treeNode35.Name = "人员排班";
-            treeNode35.Text = "人员排班";
-            treeNode36.Name = "班次管理";
-            treeNode36.Text = "班次管理";
-            treeNode37.Name = "考勤规则";
-            treeNode37.Text = "考勤规则";
-            treeNode38.ForeColor = System.Drawing.Color.Blue;
-            treeNode38.Name = "人员排班";
-            treeNode38.Text = "人员排班";
+            treeNode1.Name = "导入考勤数据";
+            treeNode1.Text = "导入考勤数据";
+            treeNode2.Name = "导出考勤数据";
+            treeNode2.Text = "导出考勤数据";
+            treeNode3.Name = "备份数据库";
+            treeNode3.Text = "备份数据库";
+            treeNode4.ForeColor = System.Drawing.Color.Blue;
+            treeNode4.Name = "节点0";
+            treeNode4.Text = "数据管理";
+            treeNode5.Name = "从设备下载记录数据";
+            treeNode5.Text = "从设备下载记录数据";
+            treeNode6.Name = "从设备下载人员信息";
+            treeNode6.Text = "从设备下载记录数据";
+            treeNode7.Name = "上传人员信息到设备";
+            treeNode7.Text = "从设备下载记录数据";
+            treeNode8.Name = "设备管理";
+            treeNode8.Text = "设备管理";
+            treeNode9.ForeColor = System.Drawing.Color.Blue;
+            treeNode9.Name = "有关设备操作";
+            treeNode9.Text = "有关设备操作";
+            treeNode10.Name = "管理员设置";
+            treeNode10.Text = "管理员设置";
+            treeNode11.Name = "人员维护";
+            treeNode11.Text = "人员维护";
+            treeNode12.Name = "数据库设置";
+            treeNode12.Text = "数据库设置";
+            treeNode13.Name = "部门表";
+            treeNode13.Text = "部门表";
+            treeNode14.ForeColor = System.Drawing.Color.Blue;
+            treeNode14.Name = "设备/维护";
+            treeNode14.Text = "设备/维护";
+            treeNode15.Name = "时间段维护";
+            treeNode15.Text = "时间段维护";
+            treeNode16.Name = "人员排班";
+            treeNode16.Text = "人员排班";
+            treeNode17.Name = "班次管理";
+            treeNode17.Text = "班次管理";
+            treeNode18.Name = "考勤规则";
+            treeNode18.Text = "考勤规则";
+            treeNode19.ForeColor = System.Drawing.Color.Blue;
+            treeNode19.Name = "人员排班";
+            treeNode19.Text = "人员排班";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode23,
-            treeNode28,
-            treeNode33,
-            treeNode38});
+            treeNode4,
+            treeNode9,
+            treeNode14,
+            treeNode19});
             this.treeView1.Size = new System.Drawing.Size(203, 329);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);

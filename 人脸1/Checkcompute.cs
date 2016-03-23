@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace 人脸1
 {
-    public partial class Form14 : Form
+    public partial class Checkcompute : Form
     {
-        public Form14()
+        public Checkcompute()
         {
             InitializeComponent();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

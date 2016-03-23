@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace 人脸1
 {
-    public partial class Form18 : Form
+    public partial class DivisionalManagement : Form
     {
-        public Form18()
+        public DivisionalManagement()
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            DivisionalManagement form17 = new DivisionalManagement();
-            form17.Show();
-        }
-
-   
-
-
-    
     }
 }
