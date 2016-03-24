@@ -54,6 +54,12 @@
     <Compile Include="AboutSys.Designer.cs">
       <DependentUpon>AboutSys.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDepartment.Designer.cs">
+      <DependentUpon>AddDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alterlog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,35 +84,59 @@
     <Compile Include="DelMessage.Designer.cs">
       <DependentUpon>DelMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="EquipmentManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentManage.Designer.cs">
+      <DependentUpon>EquipmentManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form10.cs">
+    <Compile Include="StaffSchedu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form10.Designer.cs">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <Compile Include="StaffSchedu.Designer.cs">
+      <DependentUpon>StaffSchedu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form11.cs">
+    <Compile Include="TimeSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form11.Designer.cs">
-      <DependentUpon>Form11.cs</DependentUpon>
+    <Compile Include="TimeSet.Designer.cs">
+      <DependentUpon>TimeSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form12.cs">
+    <Compile Include="USBImEx.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form12.Designer.cs">
-      <DependentUpon>Form12.cs</DependentUpon>
+    <Compile Include="USBImEx.Designer.cs">
+      <DependentUpon>USBImEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form13.cs">
+    <Compile Include="LeaveSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form13.Designer.cs">
-      <DependentUpon>Form13.cs</DependentUpon>
+    <Compile Include="LeaveSet.Designer.cs">
+      <DependentUpon>LeaveSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotHendle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotHendle.Designer.cs">
+      <DependentUpon>ForgotHendle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeHandle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeHandle.Designer.cs">
+      <DependentUpon>TimeHandle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HireStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HireStaff.Designer.cs">
+      <DependentUpon>HireStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Record.cs">
       <SubType>Form</SubType>
@@ -132,17 +162,17 @@
     <Compile Include="DivisionalManagement.Designer.cs">
       <DependentUpon>DivisionalManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form18.cs">
+    <Compile Include="StaffMaintain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form18.Designer.cs">
-      <DependentUpon>Form18.cs</DependentUpon>
+    <Compile Include="StaffMaintain.Designer.cs">
+      <DependentUpon>StaffMaintain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form19.cs">
+    <Compile Include="AdminSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form19.Designer.cs">
-      <DependentUpon>Form19.cs</DependentUpon>
+    <Compile Include="AdminSet.Designer.cs">
+      <DependentUpon>AdminSet.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQuery.cs">
       <SubType>Form</SubType>
@@ -150,35 +180,35 @@
     <Compile Include="FormQuery.Designer.cs">
       <DependentUpon>FormQuery.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form20.cs">
+    <Compile Include="SysHint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form20.Designer.cs">
-      <DependentUpon>Form20.cs</DependentUpon>
+    <Compile Include="SysHint.Designer.cs">
+      <DependentUpon>SysHint.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form21.cs">
+    <Compile Include="ShiftManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form21.Designer.cs">
-      <DependentUpon>Form21.cs</DependentUpon>
+    <Compile Include="ShiftManage.Designer.cs">
+      <DependentUpon>ShiftManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form22.cs">
+    <Compile Include="CheckSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form22.Designer.cs">
-      <DependentUpon>Form22.cs</DependentUpon>
+    <Compile Include="CheckSet.Designer.cs">
+      <DependentUpon>CheckSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form23.cs">
+    <Compile Include="FestivalSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form23.Designer.cs">
-      <DependentUpon>Form23.cs</DependentUpon>
+    <Compile Include="FestivalSet.Designer.cs">
+      <DependentUpon>FestivalSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form24.cs">
+    <Compile Include="CheakRuleSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form24.Designer.cs">
-      <DependentUpon>Form24.cs</DependentUpon>
+    <Compile Include="CheakRuleSet.Designer.cs">
+      <DependentUpon>CheakRuleSet.cs</DependentUpon>
     </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
@@ -186,29 +216,29 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="FingerprintSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="FingerprintSet.Designer.cs">
+      <DependentUpon>FingerprintSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7.cs">
+    <Compile Include="ClearOldData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <Compile Include="ClearOldData.Designer.cs">
+      <DependentUpon>ClearOldData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form8.cs">
+    <Compile Include="ImportData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <Compile Include="ImportData.Designer.cs">
+      <DependentUpon>ImportData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form9.cs">
+    <Compile Include="ExportData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form9.Designer.cs">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <Compile Include="ExportData.Designer.cs">
+      <DependentUpon>ExportData.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage.cs">
       <SubType>Form</SubType>
@@ -226,6 +256,9 @@
     <EmbeddedResource Include="AboutSys.resx">
       <DependentUpon>AboutSys.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddDepartment.resx">
+      <DependentUpon>AddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alterlog.resx">
       <DependentUpon>Alterlog.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,20 +271,32 @@
     <EmbeddedResource Include="DelMessage.resx">
       <DependentUpon>DelMessage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EquipmentManage.resx">
+      <DependentUpon>EquipmentManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form10.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <EmbeddedResource Include="StaffSchedu.resx">
+      <DependentUpon>StaffSchedu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form11.resx">
-      <DependentUpon>Form11.cs</DependentUpon>
+    <EmbeddedResource Include="TimeSet.resx">
+      <DependentUpon>TimeSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form12.resx">
-      <DependentUpon>Form12.cs</DependentUpon>
+    <EmbeddedResource Include="USBImEx.resx">
+      <DependentUpon>USBImEx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form13.resx">
-      <DependentUpon>Form13.cs</DependentUpon>
+    <EmbeddedResource Include="LeaveSet.resx">
+      <DependentUpon>LeaveSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotHendle.resx">
+      <DependentUpon>ForgotHendle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeHandle.resx">
+      <DependentUpon>TimeHandle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HireStaff.resx">
+      <DependentUpon>HireStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Record.resx">
       <DependentUpon>Record.cs</DependentUpon>
@@ -265,44 +310,44 @@
     <EmbeddedResource Include="DivisionalManagement.resx">
       <DependentUpon>DivisionalManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form18.resx">
-      <DependentUpon>Form18.cs</DependentUpon>
+    <EmbeddedResource Include="StaffMaintain.resx">
+      <DependentUpon>StaffMaintain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form19.resx">
-      <DependentUpon>Form19.cs</DependentUpon>
+    <EmbeddedResource Include="AdminSet.resx">
+      <DependentUpon>AdminSet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuery.resx">
       <DependentUpon>FormQuery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form20.resx">
-      <DependentUpon>Form20.cs</DependentUpon>
+    <EmbeddedResource Include="SysHint.resx">
+      <DependentUpon>SysHint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form21.resx">
-      <DependentUpon>Form21.cs</DependentUpon>
+    <EmbeddedResource Include="ShiftManage.resx">
+      <DependentUpon>ShiftManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form22.resx">
-      <DependentUpon>Form22.cs</DependentUpon>
+    <EmbeddedResource Include="CheckSet.resx">
+      <DependentUpon>CheckSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form23.resx">
-      <DependentUpon>Form23.cs</DependentUpon>
+    <EmbeddedResource Include="FestivalSet.resx">
+      <DependentUpon>FestivalSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form24.resx">
-      <DependentUpon>Form24.cs</DependentUpon>
+    <EmbeddedResource Include="CheakRuleSet.resx">
+      <DependentUpon>CheakRuleSet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="FingerprintSet.resx">
+      <DependentUpon>FingerprintSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="ClearOldData.resx">
+      <DependentUpon>ClearOldData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <EmbeddedResource Include="ImportData.resx">
+      <DependentUpon>ImportData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form9.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <EmbeddedResource Include="ExportData.resx">
+      <DependentUpon>ExportData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage.resx">
       <DependentUpon>Manage.cs</DependentUpon>

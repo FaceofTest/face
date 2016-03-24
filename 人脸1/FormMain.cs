@@ -77,7 +77,7 @@ namespace 人脸1
 
         private void 清除过期数据TToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form7 form7 = new Form7();
+            ClearOldData form7 = new ClearOldData();
             form7.Show();
         }
 
@@ -95,19 +95,19 @@ namespace 人脸1
 
         private void 导入考勤数据CtrlIToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form8 form8 = new Form8();
+            ImportData form8 = new ImportData();
             form8.Show();
         }
 
         private void 导出考勤数据EToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form9 form9 = new Form9();
+            ExportData form9 = new ExportData();
             form9.Show();
         }
 
         private void uSB闪存管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form10 form10 = new Form10();
+            USBImEx form10 = new USBImEx();
             form10.Show();
         }
 
@@ -118,19 +118,19 @@ namespace 人脸1
 
         private void 公出请假ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form11 form11 = new Form11();
+            LeaveSet form11 = new LeaveSet();
             form11.Show();
         }
 
         private void 忘签到CtrlKToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form12 form12 = new Form12();
+            ForgotHendle form12 = new ForgotHendle();
             form12.Show();
         }
 
         private void 集体迟到早退处理CtrlLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form13 form13 = new Form13();
+            TimeHandle form13 = new TimeHandle();
             form13.Show();
         }
 
@@ -160,43 +160,43 @@ namespace 人脸1
 
         private void 人员维护CtrlEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form18 form18 = new Form18();
+            StaffMaintain form18 = new StaffMaintain();
             form18.Show();
         }
 
         private void 管理员设置AToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form19 form19 = new Form19();
+            AdminSet form19 = new AdminSet();
             form19.Show();
         }
 
         private void 时间段维护ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form20 form20 = new Form20();
+            SysHint form20 = new SysHint();
             form20.Show();
         }
 
         private void 班次管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form21 form21 = new Form21();
+            ShiftManage form21 = new ShiftManage();
             form21.Show();
         }
 
         private void 人员排班ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form20 form20 = new Form20();
+            SysHint form20 = new SysHint();
             form20.Show();
         }
 
         private void 节日维护HToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form23 form23 = new Form23();
+            FestivalSet form23 = new FestivalSet();
             form23.Show();
         }
 
         private void 考勤规则RToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form24 form24 = new Form24();
+            CheakRuleSet form24 = new CheakRuleSet();
             form24.Show();
         }
 
@@ -214,15 +214,6 @@ namespace 人脸1
         {
             AboutSys absys = new AboutSys();
             absys.Show();
-        }
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            if (treeView1.Nodes[2].Nodes[3].IsSelected == true)
-            {
-                DivisionalManagement form17 = new DivisionalManagement();
-                form17.Show();
-            }
         }
 
         private void 检查新版本ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -244,6 +235,108 @@ namespace 人脸1
                 cc.Show();
             }
         
+        }
+
+        private void 人员维护_Click(object sender, EventArgs e)
+        {
+            StaffMaintain sm = new StaffMaintain();
+            sm.Show();
+        }
+
+        private void 出勤记录_Click(object sender, EventArgs e)
+        {
+            Record re = new Record();
+            re.Show();
+        }
+
+        private void 统计报表_Click(object sender, EventArgs e)
+        {
+            Checkcompute cc = new Checkcompute();
+            cc.Show();
+        }
+
+        private void 设备维护_Click(object sender, EventArgs e)
+        {
+            EquipmentManage em = new EquipmentManage();
+            em.Show();
+        }
+
+  
+        private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (treeView1.Nodes[0].Nodes[0].IsSelected == true)
+            {
+                ImportData id = new ImportData();
+                id.Show();
+            }
+            if (treeView1.Nodes[0].Nodes[1].IsSelected == true)
+            {
+                ExportData ed = new ExportData();
+                ed.Show(); 
+            }
+            if (treeView1.Nodes[0].Nodes[2].IsSelected == true)
+            {
+                MessageBox.Show("王伏，这里没有做", "注意");
+            }
+            if (treeView1.Nodes[1].Nodes[0].IsSelected == true)
+            {
+                MessageBox.Show("没有连接设备", "注意");
+            }
+            if (treeView1.Nodes[1].Nodes[1].IsSelected == true)
+            {
+                MessageBox.Show("没有连接设备", "注意");
+            }
+            if (treeView1.Nodes[1].Nodes[2].IsSelected == true)
+            {
+                MessageBox.Show("没有连接设备", "注意");
+            }
+            if (treeView1.Nodes[1].Nodes[3].IsSelected == true)
+            {
+                MessageBox.Show("没有连接设备", "注意");
+            }
+            if (treeView1.Nodes[2].Nodes[0].IsSelected == true)
+            {
+                AdminSet ads = new AdminSet();
+                ads.Show();
+            }
+            if (treeView1.Nodes[2].Nodes[1].IsSelected == true)
+            {
+                StaffMaintain sm = new StaffMaintain();
+                sm.Show();
+            }
+            if (treeView1.Nodes[2].Nodes[2].IsSelected == true)
+            {
+                MessageBox.Show("王伏，这里没有做", "注意");
+            }
+            if (treeView1.Nodes[2].Nodes[3].IsSelected == true)
+            {
+                DivisionalManagement form17 = new DivisionalManagement();
+                form17.Show();
+            }
+            if (treeView1.Nodes[3].Nodes[0].IsSelected == true)
+            {
+
+                TimeSet ts = new TimeSet();
+                ts.Show();
+            }
+            if (treeView1.Nodes[3].Nodes[1].IsSelected == true)
+            {
+
+                StaffSchedu ss = new StaffSchedu();
+                ss.Show();
+
+            }
+            if (treeView1.Nodes[3].Nodes[2].IsSelected == true)
+            {
+
+                ShiftManage shm = new ShiftManage();
+                shm.Show();
+            }
+            if (treeView1.Nodes[3].Nodes[3].IsSelected == true)
+            {
+                CheakRuleSet crs = new CheakRuleSet();
+                crs.Show();
+            }
         }     
   
     }

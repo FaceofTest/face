@@ -40,5 +40,7 @@ namespace 人脸1
             DelMessage dm = new DelMessage();
             dm.Show();
         }
+
+     
     }
 }

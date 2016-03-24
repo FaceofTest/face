@@ -16,5 +16,17 @@ namespace 人脸1
         {
             InitializeComponent();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            AddDepartment ad = new AddDepartment();
+            ad.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            HireStaff hs = new HireStaff();
+            hs.Show();
+        }
     }
 }

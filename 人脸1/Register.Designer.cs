@@ -141,7 +141,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(451, 289);
+            this.button1.Location = new System.Drawing.Point(314, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 25);
             this.button1.TabIndex = 12;
@@ -174,7 +174,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(286, 291);
+            this.button2.Location = new System.Drawing.Point(441, 290);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 17;
@@ -200,7 +200,7 @@
             // 
             this.openFileDialog3.FileName = "openFileDialog3";
             // 
-            // Form3
+            // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,7 +222,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("宋体", 10F);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "Form3";
+            this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "注册";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

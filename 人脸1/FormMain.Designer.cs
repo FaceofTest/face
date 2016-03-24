@@ -106,7 +106,6 @@
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.数据库设置OToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
-            this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设备管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.连接设备ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.断开设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -457,8 +456,7 @@
             this.假类设置ToolStripMenuItem,
             this.toolStripSeparator10,
             this.数据库设置OToolStripMenuItem,
-            this.toolStripSeparator16,
-            this.系统设置ToolStripMenuItem});
+            this.toolStripSeparator16});
             this.维护设置ToolStripMenuItem.Name = "维护设置ToolStripMenuItem";
             this.维护设置ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.维护设置ToolStripMenuItem.Text = "维护/设置（&C）";
@@ -550,12 +548,6 @@
             // 
             this.toolStripSeparator16.Name = "toolStripSeparator16";
             this.toolStripSeparator16.Size = new System.Drawing.Size(165, 6);
-            // 
-            // 系统设置ToolStripMenuItem
-            // 
-            this.系统设置ToolStripMenuItem.Name = "系统设置ToolStripMenuItem";
-            this.系统设置ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.系统设置ToolStripMenuItem.Text = "系统设置";
             // 
             // 设备管理ToolStripMenuItem
             // 
@@ -735,6 +727,7 @@
             this.人员维护.Name = "人员维护";
             this.人员维护.Size = new System.Drawing.Size(59, 64);
             this.人员维护.Text = "人员维护";
+            this.人员维护.Click += new System.EventHandler(this.人员维护_Click);
             // 
             // 出勤记录
             // 
@@ -742,6 +735,7 @@
             this.出勤记录.Name = "出勤记录";
             this.出勤记录.Size = new System.Drawing.Size(59, 64);
             this.出勤记录.Text = "出勤记录";
+            this.出勤记录.Click += new System.EventHandler(this.出勤记录_Click);
             // 
             // 统计报表
             // 
@@ -749,6 +743,7 @@
             this.统计报表.Name = "统计报表";
             this.统计报表.Size = new System.Drawing.Size(59, 64);
             this.统计报表.Text = "统计报表";
+            this.统计报表.Click += new System.EventHandler(this.统计报表_Click);
             // 
             // toolStripSeparator1
             // 
@@ -761,6 +756,7 @@
             this.设备维护.Name = "设备维护";
             this.设备维护.Size = new System.Drawing.Size(59, 64);
             this.设备维护.Text = "设备维护";
+            this.设备维护.Click += new System.EventHandler(this.设备维护_Click);
             // 
             // 删除设备
             // 
@@ -830,6 +826,7 @@
             treeNode2.Text = "导出考勤数据";
             treeNode3.Name = "备份数据库";
             treeNode3.Text = "备份数据库";
+            treeNode4.Checked = true;
             treeNode4.ForeColor = System.Drawing.Color.Blue;
             treeNode4.Name = "节点0";
             treeNode4.Text = "数据管理";
@@ -873,7 +870,7 @@
             treeNode19});
             this.treeView1.Size = new System.Drawing.Size(203, 329);
             this.treeView1.TabIndex = 0;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
             // 
             // BottomToolStripPanel
             // 
@@ -1220,7 +1217,6 @@
         private System.Windows.Forms.ToolStripMenuItem 考勤规则RToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 假类设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 数据库设置OToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 系统设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 设备管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 连接设备ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 断开设置ToolStripMenuItem;
