@@ -78,11 +78,23 @@
     <Compile Include="Checkcompute.Designer.cs">
       <DependentUpon>Checkcompute.cs</DependentUpon>
     </Compile>
+    <Compile Include="DelDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelDivision.Designer.cs">
+      <DependentUpon>DelDivision.cs</DependentUpon>
+    </Compile>
     <Compile Include="DelMessage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DelMessage.Designer.cs">
       <DependentUpon>DelMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionRename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DivisionRename.Designer.cs">
+      <DependentUpon>DivisionRename.cs</DependentUpon>
     </Compile>
     <Compile Include="EquipmentManage.cs">
       <SubType>Form</SubType>
@@ -268,8 +280,14 @@
     <EmbeddedResource Include="Checkcompute.resx">
       <DependentUpon>Checkcompute.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DelDivision.resx">
+      <DependentUpon>DelDivision.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DelMessage.resx">
       <DependentUpon>DelMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DivisionRename.resx">
+      <DependentUpon>DivisionRename.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EquipmentManage.resx">
       <DependentUpon>EquipmentManage.cs</DependentUpon>

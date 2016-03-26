@@ -14,9 +14,10 @@ namespace 人脸1
 {
     public partial class AddDepartment : Form
     {
-        public AddDepartment()
+        public AddDepartment(DivisionalManagement dm)
         {
             InitializeComponent();
+            this.dm = dm;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,18 +36,29 @@ namespace 人脸1
                 List<SqlParameter> paras = new List<SqlParameter>();
                 paras.Add(new SqlParameter("@DEPARTMENTNAME", textBox1.Text.Trim()));
                 paras.Add(new SqlParameter("@DEPARTMENTID", textBox2.Text.Trim()));
-                SqlCommand cmd = new SqlCommand(sql);//执行sql语句
-                cmd.Parameters.AddRange(paras.ToArray());//添加
-                var db = new DBHelper("MyCN");
-                int i = db.ExecuteNonQuery(cmd);
-                if (i != 0)
+                try
                 {
-                    MessageBox.Show("添加部门成功", "提示");
-                    //这里；
+                    SqlCommand cmd = new SqlCommand(sql);//执行sql语句
+                    cmd.Parameters.AddRange(paras.ToArray());//添加
+                    var db = new DBHelper("MyCN");
+                    int i = db.ExecuteNonQuery(cmd);
+                    if (i != 0)
+                    {
+                        MessageBox.Show("添加部门成功", "提示");
+                        TreeNode tn = new TreeNode(textBox1.Text.Trim());
+                        tn.Name = textBox1.Text.Trim();
+                        dm.treeView1.Nodes[0].Nodes.Add(tn);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("添加部门失败", "提示");
+                    }
                 }
-                else
+                catch (SqlException)
                 {
-                    MessageBox.Show("添加部门失败", "提示");
+                    textBox2.Text = null;
+                    MessageBox.Show("输入编号重复，请重新输入","提示");
                 }
             }
         }

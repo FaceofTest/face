@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DivisionalManagement));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("总公司");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("总公司");
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -39,10 +39,10 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label2 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +88,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(109, 54);
             this.toolStripButton2.Text = "撤销部门";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripSeparator2
             // 
@@ -102,6 +103,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(109, 54);
             this.toolStripButton3.Text = "部门更名";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -122,6 +124,17 @@
             this.panel1.Size = new System.Drawing.Size(254, 296);
             this.panel1.TabIndex = 1;
             // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(3, 3);
+            this.treeView1.Name = "treeView1";
+            treeNode6.Name = "总公司";
+            treeNode6.Text = "总公司";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode6});
+            this.treeView1.Size = new System.Drawing.Size(248, 290);
+            this.treeView1.TabIndex = 0;
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -138,17 +151,6 @@
             this.label2.Text = "    操作提示\r\n\r\n    要修改部门名称时，只需要在部\r\n门名称上两次单击鼠标左键或F2键\r\n即可修改。\r\n \r\n    要修改部门的隶属关系时，将\r\n要修" +
     "改的部门拖动到新的上级部门\r\n名称上即可\r\n   \r\n    顶级部门不能删除，可以修改。";
             // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(3, 3);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "总公司";
-            treeNode1.Text = "总公司";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            this.treeView1.Size = new System.Drawing.Size(248, 290);
-            this.treeView1.TabIndex = 0;
-            // 
             // DivisionalManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
@@ -161,6 +163,7 @@
             this.Name = "DivisionalManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "部门管理";
+            this.Load += new System.EventHandler(this.DivisionalManagement_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

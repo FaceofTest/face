@@ -69,7 +69,6 @@ namespace 人脸1
                 var db = new DBHelper("MyCN");
                 var dataTable = db.ExecuteDataTable(cmd);
                 dataGridView1.DataSource = dataTable;
-                Console.WriteLine(dataTable.Rows.Count);
             }
         }
 

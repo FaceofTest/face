@@ -116,5 +116,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private DivisionalManagement dm;
     }
 }
