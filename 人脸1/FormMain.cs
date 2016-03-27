@@ -154,8 +154,8 @@ namespace 人脸1
 
         private void 部门管理DToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DivisionalManagement form17 = new DivisionalManagement();
-            form17.Show();
+            DivisionalManagement dm = new DivisionalManagement();
+            dm.Show();
         }
 
         private void 人员维护CtrlEToolStripMenuItem_Click(object sender, EventArgs e)

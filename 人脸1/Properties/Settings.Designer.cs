@@ -26,10 +26,21 @@ namespace 人脸1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ACER-PC;Initial Catalog=Test;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ACER-PC;Initial Catalog=FaceData;Integrated Security=True")]
         public string TestConnectionString {
             get {
                 return ((string)(this["TestConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ACER-PC;Initial Catalog=FaceData;Persist Security Info=True;User ID=s" +
+            "a;Password=123456")]
+        public string FaceDataConnectionString {
+            get {
+                return ((string)(this["FaceDataConnectionString"]));
             }
         }
     }

@@ -79,13 +79,13 @@ namespace 人脸1
 
                 string sql = "insert into STAFFINFORMATION (STAFFID,NAME,GENDER,MINZU,BIRTHDAY,TITLE,OPHONE,PHOTO,DEFAULTDEPTNAME) values(@STAFFID,@NAME,@GENDER,@MINZU,@BIRTHDAY,@TITLE,@OPHONE,@PHOTO,@DEFAULTDEPTNAME)";//往数据库FaceDate中插入数据
                 List<SqlParameter> paras = new List<SqlParameter>();
-                paras.Add(new SqlParameter("@STAFFID", textBox1.Text.Trim()));
-                paras.Add(new SqlParameter("@NAME", textBox6.Text.Trim()));
-                paras.Add(new SqlParameter("@MINZU", textBox3.Text.Trim()));
-                paras.Add(new SqlParameter("@BIRTHDAY", dateTimePicker2.Value));  // dateTimePicker2.Value
-                paras.Add(new SqlParameter("@TITLE", textBox4.Text.Trim()));
-                paras.Add(new SqlParameter("@OPHONE", textBox8.Text.Trim()));
-                paras.Add(new SqlParameter("@DEFAULTDEPTNAME", textBox2.Text.Trim()));  
+                paras.Add(new SqlParameter("@STAFFID", textBox1.Text.Trim())); //人员编号
+                paras.Add(new SqlParameter("@NAME", textBox6.Text.Trim()));    //姓名
+                paras.Add(new SqlParameter("@MINZU", textBox3.Text.Trim()));   //民族
+                paras.Add(new SqlParameter("@BIRTHDAY", dateTimePicker2.Value));  // 出生日期
+                paras.Add(new SqlParameter("@TITLE", textBox4.Text.Trim()));     //职务
+                paras.Add(new SqlParameter("@OPHONE", textBox8.Text.Trim()));    //办公电话
+                paras.Add(new SqlParameter("@DEFAULTDEPTNAME", textBox2.Text.Trim()));  //所属部门
                 if (radioButtonMale.Checked)
                 {
                     paras.Add(new SqlParameter("@GENDER", true));
@@ -143,9 +143,86 @@ namespace 人脸1
             }
         }
 
-   
+        private void StaffMaintain_Load(object sender, EventArgs e)
+        {
+            // TODO:  这行代码将数据加载到表“faceDataDataSet.STAFFINFORMATION”中。您可以根据需要移动或删除它。
+            this.sTAFFINFORMATIONTableAdapter.Fill(this.faceDataDataSet.STAFFINFORMATION);
+            string commandText = @"select DEPARTMENTNAME from DEPARTMENT ";
+            SqlCommand cmd = new SqlCommand(commandText);//执行sql语句
+            var db = new DBHelper("MyCN");
+            var dataTable = db.ExecuteDataTable(cmd);
+            int i = dataTable.Rows.Count;              //将姓名放在datatable中 并加载到treeview中
+            for (int m = 0; m < i; m++)
+            {
+                TreeNode tn = new TreeNode(dataTable.Rows[0][m].ToString());
+                tn.Name = dataTable.Rows[0][m].ToString();
+                treeView1.Nodes[0].Nodes.Add(tn);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+            radioButton5.Checked = false;
+            radioButton6.Checked = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            String num = textBox1.Text.Trim();
+            if (!radioButton3.Checked && !radioButton4.Checked)
+            {
+                MessageBox.Show("请选择上班是否需要签到", "提示");
+            }
+            if (!radioButton5.Checked && !radioButton6.Checked)
+            {
+                MessageBox.Show("请选择下班是否需要签到", "提示");
+            }
+            else
+            {
+                try
+                {
+                    int b3=1, b4=1, b5=1, b6=1;
+                    if (radioButton3.Checked)
+                    {
+                         b3 = 0;     //0真 1假
+                    }
+                    if (radioButton4.Checked)
+                    {
+                         b4 = 1;
+                    }
+                    if (radioButton5.Checked)
+                    {
+                         b5 = 0;
+                    }
+                    if (radioButton6.Checked)
+                    {
+                         b6 = 1;
+                    }
+                    string sql = "update STAFFINFORMATION set WORKSET ='"+b3+"',WORKNOYSET='"+b4+"',LEAVESET='"+b5+"',LEAVENOTSET='"+b6+"' where STAFFID = '"+num+"'";
+                    List<SqlParameter> paras = new List<SqlParameter>();
+                    SqlCommand cmd = new SqlCommand(sql);//执行sql语句
+                    cmd.Parameters.AddRange(paras.ToArray());//添加
+                    var db = new DBHelper("MyCN");
+                    int i = db.ExecuteNonQuery(cmd);
+                    if (i != 0)
+                    {
+                        MessageBox.Show("考勤设置成功", "提示");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("考勤设置失败", "提示");
+                    }
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("sads", "sad");
+                }
 
 
-    
+            }
+        }
     }
 }

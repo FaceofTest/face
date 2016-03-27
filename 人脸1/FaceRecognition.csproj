@@ -102,6 +102,11 @@
     <Compile Include="EquipmentManage.Designer.cs">
       <DependentUpon>EquipmentManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FaceDataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FaceDataDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -379,6 +384,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="FaceDataDataSet.xsc">
+      <DependentUpon>FaceDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FaceDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FaceDataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FaceDataDataSet.xss">
+      <DependentUpon>FaceDataDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
