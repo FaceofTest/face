@@ -10,11 +10,13 @@ CREATE TABLE STAFFINFORMATION
 	GENDER BIT NOT NULL ,                       --性别
 	MINZU NVARCHAR (20) NOT NULL ,                 --民族
 	BIRTHDAY NVARCHAR (20) NOT NULL ,                --出生日期
-    TITLE NVARCHAR (20) NOT NULL                --职务
+    TITLE NVARCHAR (20) NOT NULL ,               --职务
 	OPHONE INT  NOT NULL ,              --办公电话
 	PHOTO CHAR (100) NOT NULL,                --照片路径  
 	DEFAULTDEPTNAME NVARCHAR (20) NOT NULL  DEFAULT 1, --所属部门
-	WORKTIMEBEGINING NVARCHAR (20),    --上班时间
-	WORKTIMEEND NVARCHAR(20) ,        -- 下班时间
+	WORKSET SMALLINT NULL  DEFAULT 1,                  --	上班必须签到
+	WORKNOTSET SMALLINT NULL DEFAULT 1,                --   上班不须签到
+	LEAVESET   SMALLINT NULL DEFAULT 1,                --   下班必须签到
+	LEAVENOTSET SMALLINT NULL DEFAULT 1,               --   下班不须签到
 
 );

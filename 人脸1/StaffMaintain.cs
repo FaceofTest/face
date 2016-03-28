@@ -181,8 +181,6 @@ namespace 人脸1
             }
             else
             {
-                try
-                {
                     int b3=1, b4=1, b5=1, b6=1;
                     if (radioButton3.Checked)
                     {
@@ -200,10 +198,8 @@ namespace 人脸1
                     {
                          b6 = 1;
                     }
-                    string sql = "update STAFFINFORMATION set WORKSET ='"+b3+"',WORKNOYSET='"+b4+"',LEAVESET='"+b5+"',LEAVENOTSET='"+b6+"' where STAFFID = '"+num+"'";
-                    List<SqlParameter> paras = new List<SqlParameter>();
+                    string sql = "update STAFFINFORMATION set WORKSET ='"+b3+"',WORKNOTSET='"+b4+"',LEAVESET='"+b5+"',LEAVENOTSET='"+b6+"' where STAFFID = '"+num+"'";
                     SqlCommand cmd = new SqlCommand(sql);//执行sql语句
-                    cmd.Parameters.AddRange(paras.ToArray());//添加
                     var db = new DBHelper("MyCN");
                     int i = db.ExecuteNonQuery(cmd);
                     if (i != 0)
@@ -215,11 +211,6 @@ namespace 人脸1
                     {
                         MessageBox.Show("考勤设置失败", "提示");
                     }
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("sads", "sad");
-                }
 
 
             }
