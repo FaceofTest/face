@@ -76,7 +76,6 @@ namespace 人脸1
         {
             if (judgeVaild() == "")
             {
-
                 string sql = "insert into STAFFINFORMATION (STAFFID,NAME,GENDER,MINZU,BIRTHDAY,TITLE,OPHONE,PHOTO,DEFAULTDEPTNAME) values(@STAFFID,@NAME,@GENDER,@MINZU,@BIRTHDAY,@TITLE,@OPHONE,@PHOTO,@DEFAULTDEPTNAME)";//往数据库FaceDate中插入数据
                 List<SqlParameter> paras = new List<SqlParameter>();
                 paras.Add(new SqlParameter("@STAFFID", textBox1.Text.Trim())); //人员编号
@@ -108,19 +107,26 @@ namespace 人脸1
                 SqlCommand cmd = new SqlCommand(sql);//执行sql语句
                 cmd.Parameters.AddRange(paras.ToArray());//添加
                 var db = new DBHelper("MyCN");
-                int i = db.ExecuteNonQuery(cmd);
-                if (i != 0)
+                try
                 {
-                    MessageBox.Show("注册成功", "提示");
+                    int i = db.ExecuteNonQuery(cmd);
+                    if (i != 0)
+                    {
+                        MessageBox.Show("注册成功", "提示");
+                    }
+                    else
+                    {
+                        MessageBox.Show("注册失败", "提示");
+                    }
                 }
-                else
+                catch (SqlException)                                       //这个try-catch 比较笼统些 为了判断主键重复
                 {
-                    MessageBox.Show("注册失败", "提示");
+                    MessageBox.Show("输入的人员编号重复，请重新输入", "提示");
+                    textBox1.Text = String.Empty;
                 }
-
-
             }
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
