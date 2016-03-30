@@ -76,7 +76,7 @@ namespace 人脸1
         {
             if (judgeVaild() == "")
             {
-                string sql = "insert into STAFFINFORMATION (STAFFID,NAME,GENDER,MINZU,BIRTHDAY,TITLE,OPHONE,PHOTO,DEFAULTDEPTNAME) values(@STAFFID,@NAME,@GENDER,@MINZU,@BIRTHDAY,@TITLE,@OPHONE,@PHOTO,@DEFAULTDEPTNAME)";//往数据库FaceDate中插入数据
+                string sql = "insert into STAFFINFORMATION (STAFFID,NAME,GENDER,MINZU,BIRTHDAY,TITLE,OPHONE,PHOTO,DEPARTMENTNAME) values(@STAFFID,@NAME,@GENDER,@MINZU,@BIRTHDAY,@TITLE,@OPHONE,@PHOTO,@DEPARTMENTNAME)";//往数据库FaceDate中插入数据
                 List<SqlParameter> paras = new List<SqlParameter>();
                 paras.Add(new SqlParameter("@STAFFID", textBox1.Text.Trim())); //人员编号
                 paras.Add(new SqlParameter("@NAME", textBox6.Text.Trim()));    //姓名
@@ -84,7 +84,7 @@ namespace 人脸1
                 paras.Add(new SqlParameter("@BIRTHDAY", dateTimePicker2.Value));  // 出生日期
                 paras.Add(new SqlParameter("@TITLE", textBox4.Text.Trim()));     //职务
                 paras.Add(new SqlParameter("@OPHONE", textBox8.Text.Trim()));    //办公电话
-                paras.Add(new SqlParameter("@DEFAULTDEPTNAME", textBox2.Text.Trim()));  //所属部门
+                paras.Add(new SqlParameter("@DEPARTMENTNAME", textBox2.Text.Trim()));  //所属部门
                 if (radioButtonMale.Checked)
                 {
                     paras.Add(new SqlParameter("@GENDER", true));
@@ -152,7 +152,7 @@ namespace 人脸1
         private void StaffMaintain_Load(object sender, EventArgs e)
         {
             // TODO:  这行代码将数据加载到表“faceDataDataSet.STAFFINFORMATION”中。您可以根据需要移动或删除它。
-            this.sTAFFINFORMATIONTableAdapter.Fill(this.faceDataDataSet.STAFFINFORMATION);
+            //this.sTAFFINFORMATIONTableAdapter.Fill(this.faceDataDataSet.STAFFINFORMATION);
             string commandText = @"select DEPARTMENTNAME from DEPARTMENT ";
             SqlCommand cmd = new SqlCommand(commandText);//执行sql语句
             var db = new DBHelper("MyCN");
@@ -160,8 +160,8 @@ namespace 人脸1
             int i = dataTable.Rows.Count;              //将姓名放在datatable中 并加载到treeview中
             for (int m = 0; m < i; m++)
             {
-                TreeNode tn = new TreeNode(dataTable.Rows[0][m].ToString());
-                tn.Name = dataTable.Rows[0][m].ToString();
+                TreeNode tn = new TreeNode(dataTable.Rows[m][0].ToString());
+                tn.Name = dataTable.Rows[m][0].ToString();
                 treeView1.Nodes[0].Nodes.Add(tn);
             }
         }
@@ -221,5 +221,97 @@ namespace 人脸1
 
             }
         }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            String judge = toolStripTextBox1.Text.Trim();
+            int i = toolStripTextBox1.Text.Length;
+            int j = 0,m = 0;
+            foreach (char c in judge)
+            {
+                if ( char.IsNumber(c))  //若输入的全是数字 则按照人员编号查找
+                {
+                    j++;
+                }
+            }
+            foreach (char c in judge)
+            {
+                if (char.IsLetter(c))  //若输入的全是汉字 则按照人员编号查找
+                {
+                    m++;
+                }
+            }
+            if (j == i)
+            {
+                FundFtaffID();
+            }
+            else if (m == i)
+            {
+                FundStaffName();
+            }
+            else 
+            {
+                MessageBox.Show("请输入人员编号 [纯数字] 或姓名 [纯汉字]","提示");
+                toolStripTextBox1.Text = String.Empty;
+            }
+           
+
+        }
+        private void FundFtaffID()
+        {
+            String Id = toolStripTextBox1.Text.Trim();
+            String sql = @"select * from STAFFINFORMATION where STAFFID = '" + Id + "'";
+            SqlCommand cmd = new SqlCommand(sql);
+            var db = new DBHelper("MyCN");
+            var dataTable = db.ExecuteDataTable(cmd);
+            dataGridView1.DataSource = dataTable;
+            
+        }
+
+
+        private void FundStaffName()
+        {
+            String name = toolStripTextBox1.Text.Trim();
+            String sql = @"select * from STAFFINFORMATION where NAME = '"+name+"'";
+            SqlCommand cmd = new SqlCommand(sql);
+            var db = new DBHelper("MyCN");
+            var dataTable = db.ExecuteDataTable(cmd);
+            dataGridView1.DataSource = dataTable;
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            TreeNode tn = treeView1.SelectedNode;
+            if (tn.IsSelected)
+            {
+                String DepartmentName = tn.Name;
+                String sql = @"select * from STAFFINFORMATION where DEPARTMENTNAME = '" + DepartmentName + "'";
+                SqlCommand cmd = new SqlCommand(sql);
+                var db = new DBHelper("MyCN");
+                var dataTable = db.ExecuteDataTable(cmd);
+                dataGridView1.DataSource = dataTable;
+
+            }
+            if (treeView1.Nodes[0].IsSelected)
+            {
+                String sql = @"select * from STAFFINFORMATION";
+                SqlCommand cmd = new SqlCommand(sql);
+                var db = new DBHelper("MyCN");
+                var dataTable = db.ExecuteDataTable(cmd);
+                dataGridView1.DataSource = dataTable;
+            }
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            DelMessage dm = new DelMessage();
+            dm.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("请在下方的基本信息中输入","提示");
+        }
+       
     }
 }

@@ -71,12 +71,7 @@ namespace 人脸1
             else
             {
                 string commandText = @"select * from FaceData where 姓名=@name ";
-                SqlParameter sqlParamater = new SqlParameter("@name",SqlDbType.NVarChar) 
-                {
-                    Value = name
-                };
                 SqlCommand cmd = new SqlCommand(commandText);//执行sql语句
-                cmd.Parameters.Add(sqlParamater);
                 var db = new DBHelper("MyCN");
                 var dataTable = db.ExecuteDataTable(cmd);
                 dataGridView1.DataSource = dataTable;

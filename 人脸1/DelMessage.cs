@@ -34,30 +34,22 @@ namespace 人脸1
             {
                 DelByNum();
             }
-            if (!textBox3.Text.Equals(""))
-            {
-                DelByIdcardNum();
-            }
         }
         private void  DelByName()
         {
             string name = textBox1.Text.Trim();
-            string commandText = @"delete from FaceData where 姓名=@name ";
-           SqlParameter sqlParamater = new SqlParameter("@name", SqlDbType.NVarChar)
-            {
-                Value = name
-            };
+            string commandText = @"delete from STAFFINFORMATION where NAME='"+name+"'";
             SqlCommand cmd = new SqlCommand(commandText);//执行sql语句
-            cmd.Parameters.Add(sqlParamater);
             var db = new DBHelper("MyCN");
             int i = db.ExecuteNonQuery(cmd);
             if (i != 0)
             {
                 MessageBox.Show("姓名是"+name+"的员工信息删除成功");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("删除失败");
+                MessageBox.Show("删除失败，失败原因可能是不存在这个员工","提示");
             } 
             
             
@@ -66,23 +58,18 @@ namespace 人脸1
         private void DelByNum()
         {
             string num = textBox2.Text.Trim();
-            string commandText = @"delete from FaceData where 编号=@num ";
-         
-            SqlParameter sqlParamater = new SqlParameter("@num", SqlDbType.Int)
-            {
-               Value = num
-            };
+            string commandText = @"delete from STAFFINFORMATION where STAFFID='"+num+"'";
             SqlCommand cmd = new SqlCommand(commandText);//执行sql语句
-            cmd.Parameters.Add(sqlParamater);
             var db = new DBHelper("MyCN");
            int i = db.ExecuteNonQuery(cmd);
             if (i != 0)
             {
                 MessageBox.Show("编号是"+num+"的员工信息删除成功");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("删除失败");
+                MessageBox.Show("删除失败，失败原因可能是不存在这个员工");
             } 
             
         }

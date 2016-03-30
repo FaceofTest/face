@@ -47,8 +47,8 @@ namespace 人脸1
             int i =dataTable.Rows.Count;              //将姓名放在datatable中 并加载到treeview中
             for (int m = 0; m <i; m++)
             {
-                TreeNode tn = new TreeNode(dataTable.Rows[0][m].ToString());
-                tn.Name = dataTable.Rows[0][m].ToString();
+                TreeNode tn = new TreeNode(dataTable.Rows[m][0].ToString());
+                tn.Name = dataTable.Rows[m][0].ToString();
                 treeView1.Nodes[0].Nodes.Add(tn);    
             }
               

@@ -39,22 +39,18 @@ namespace 人脸1
         private void DelByDepartmentName()
         {
             string name = textBox1.Text.Trim();
-            string commandText = @"delete from DEPARTMENT where DEPARTMENTNAME=@name ";
-            SqlParameter sqlParamater = new SqlParameter("@name", SqlDbType.NVarChar)
-            {
-                Value = name
-            };
+            string commandText = @"delete from DEPARTMENT where DEPARTMENTNAME='"+name+"' ";
             SqlCommand cmd = new SqlCommand(commandText);//执行sql语句
-            cmd.Parameters.Add(sqlParamater);
             var db = new DBHelper("MyCN");
             int i = db.ExecuteNonQuery(cmd);
             if (i != 0)
             {
                 MessageBox.Show( name + "部门删除成功");
+                this.Close();
                 int count = dm.treeView1.Nodes[0].Nodes.Count;
                 if (count > 0)
                 {
-                    for (int m = 0; m <= count; m++)
+                    for (int m = 0; m <=count; m++)
                     {
                         if (dm.treeView1.Nodes[0].Nodes[m].Name == name)
                         {
@@ -80,12 +76,7 @@ namespace 人脸1
         {
             string ID = textBox2.Text.Trim();
             string commandText = @"delete from DEPARTMENT where DEPARTMENTID=@name ";
-            SqlParameter sqlParamater = new SqlParameter("@name", SqlDbType.NVarChar)
-            {
-                Value = ID
-            };
             SqlCommand cmd = new SqlCommand(commandText);//执行sql语句
-            cmd.Parameters.Add(sqlParamater);
             var db = new DBHelper("MyCN");
             int i = db.ExecuteNonQuery(cmd);
             if (i != 0)
