@@ -107,8 +107,8 @@ namespace 人脸1
                 SqlCommand cmd = new SqlCommand(sql);//执行sql语句
                 cmd.Parameters.AddRange(paras.ToArray());//添加
                 var db = new DBHelper("MyCN");
-                try
-                {
+               try
+               {
                     int i = db.ExecuteNonQuery(cmd);
                     if (i != 0)
                     {
@@ -118,7 +118,7 @@ namespace 人脸1
                     {
                         MessageBox.Show("注册失败", "提示");
                     }
-                }
+               }
                 catch (SqlException)                                       //这个try-catch 比较笼统些 为了判断主键重复
                 {
                     MessageBox.Show("输入的人员编号重复，请重新输入", "提示");
@@ -311,6 +311,17 @@ namespace 人脸1
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("请在下方的基本信息中输入","提示");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Camera ca = new Camera(this);
+            ca.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = null;
         }
        
     }
