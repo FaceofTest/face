@@ -14,6 +14,7 @@ namespace 人脸1
 {
     public partial class StaffMaintain : Form
     {
+        int flag = 1;   //背景色移动时是从 （1，1）开始移动
         public StaffMaintain()
         {
             InitializeComponent();
@@ -66,6 +67,11 @@ namespace 人脸1
             {
                 MessageBox.Show("照片不能为空");
                 return "照片不能为空";
+            }
+            if (textBox2.Text == null)
+            {
+                MessageBox.Show("所属部门不能为空");
+                return "所属部门不能为空";
             }
             else
             {
@@ -151,9 +157,8 @@ namespace 人脸1
 
         private void StaffMaintain_Load(object sender, EventArgs e)
         {
-            // TODO:  这行代码将数据加载到表“faceDataDataSet.STAFFINFORMATION”中。您可以根据需要移动或删除它。
-            //this.sTAFFINFORMATIONTableAdapter.Fill(this.faceDataDataSet.STAFFINFORMATION);
-            string commandText = @"select DEPARTMENTNAME from DEPARTMENT ";
+            //树显示
+            string commandText = @"select DEPARTMENTNAME from DEPARTMENT;";
             SqlCommand cmd = new SqlCommand(commandText);//执行sql语句
             var db = new DBHelper("MyCN");
             var dataTable = db.ExecuteDataTable(cmd);
@@ -164,8 +169,19 @@ namespace 人脸1
                 tn.Name = dataTable.Rows[m][0].ToString();
                 treeView1.Nodes[0].Nodes.Add(tn);
             }
+
+            //信息显示
+           informationshow();
         }
 
+        private void informationshow()
+        {
+            string commandText1 = @"select STAFFID as '人员编号',NAME as '姓名',GENDER as '性别',MINZU as '民族',BIRTHDAY as '出生日期',TITLE as '职务',OPHONE as '电话号码',PHOTO as '照片',DEPARTMENTNAME as '部门名称' from STAFFINFORMATION;";
+            SqlCommand cmd1 = new SqlCommand(commandText1);//执行sql语句
+            var db = new DBHelper("MyCN");
+            var dataTable1 = db.ExecuteDataTable(cmd1);
+            dataGridView1.DataSource = dataTable1;
+        }
         private void button9_Click(object sender, EventArgs e)
         {
             radioButton3.Checked = false;
@@ -227,6 +243,10 @@ namespace 人脸1
             String judge = toolStripTextBox1.Text.Trim();
             int i = toolStripTextBox1.Text.Length;
             int j = 0,m = 0;
+            if (toolStripTextBox1.Text == String.Empty)
+            {
+                MessageBox.Show("请先输入查询条件","提示");
+            }
             foreach (char c in judge)
             {
                 if ( char.IsNumber(c))  //若输入的全是数字 则按照人员编号查找
@@ -260,11 +280,21 @@ namespace 人脸1
         private void FundFtaffID()
         {
             String Id = toolStripTextBox1.Text.Trim();
-            String sql = @"select * from STAFFINFORMATION where STAFFID = '" + Id + "'";
-            SqlCommand cmd = new SqlCommand(sql);
-            var db = new DBHelper("MyCN");
-            var dataTable = db.ExecuteDataTable(cmd);
-            dataGridView1.DataSource = dataTable;
+            if (toolStripTextBox1.Text.Trim() != String.Empty)
+            {
+                String sql = @"select  STAFFID as '人员编号',NAME as '姓名',GENDER as '性别',MINZU as '民族',BIRTHDAY as '出生日期',TITLE as '职务',OPHONE as '电话号码',PHOTO as '照片',DEPARTMENTNAME as '部门名称' from STAFFINFORMATION where STAFFID = '" + Id + "'";
+                SqlCommand cmd = new SqlCommand(sql);
+                var db = new DBHelper("MyCN");
+                var dataTable = db.ExecuteDataTable(cmd);
+                dataGridView1.DataSource = dataTable;
+                if (dataGridView1.RowCount == 1)
+                {
+                    MessageBox.Show("您查询的员工不存在", "提示");
+                    informationshow();
+
+                }
+            }
+            
             
         }
 
@@ -272,11 +302,16 @@ namespace 人脸1
         private void FundStaffName()
         {
             String name = toolStripTextBox1.Text.Trim();
-            String sql = @"select * from STAFFINFORMATION where NAME = '"+name+"'";
+            String sql = @"select  STAFFID as '人员编号',NAME as '姓名',GENDER as '性别',MINZU as '民族',BIRTHDAY as '出生日期',TITLE as '职务',OPHONE as '电话号码',PHOTO as '照片',DEPARTMENTNAME as '部门名称' from STAFFINFORMATION where NAME = '"+name+"'";
             SqlCommand cmd = new SqlCommand(sql);
             var db = new DBHelper("MyCN");
             var dataTable = db.ExecuteDataTable(cmd);
             dataGridView1.DataSource = dataTable;
+            if (dataGridView1.RowCount == 1)
+            {
+                MessageBox.Show("您查询的员工不存在", "提示");
+                informationshow();
+            }
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -285,7 +320,7 @@ namespace 人脸1
             if (tn.IsSelected)
             {
                 String DepartmentName = tn.Name;
-                String sql = @"select * from STAFFINFORMATION where DEPARTMENTNAME = '" + DepartmentName + "'";
+                String sql = @"select  STAFFID as '人员编号',NAME as '姓名',GENDER as '性别',MINZU as '民族',BIRTHDAY as '出生日期',TITLE as '职务',OPHONE as '电话号码',PHOTO as '照片',DEPARTMENTNAME as '部门名称' from STAFFINFORMATION where DEPARTMENTNAME = '" + DepartmentName + "'";
                 SqlCommand cmd = new SqlCommand(sql);
                 var db = new DBHelper("MyCN");
                 var dataTable = db.ExecuteDataTable(cmd);
@@ -294,7 +329,7 @@ namespace 人脸1
             }
             if (treeView1.Nodes[0].IsSelected)
             {
-                String sql = @"select * from STAFFINFORMATION";
+                String sql = @"select STAFFID as '人员编号',NAME as '姓名',GENDER as '性别',MINZU as '民族',BIRTHDAY as '出生日期',TITLE as '职务',OPHONE as '电话号码',PHOTO as '照片',DEPARTMENTNAME as '部门名称' from STAFFINFORMATION;";
                 SqlCommand cmd = new SqlCommand(sql);
                 var db = new DBHelper("MyCN");
                 var dataTable = db.ExecuteDataTable(cmd);
@@ -322,6 +357,28 @@ namespace 人脸1
         private void button3_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = null;
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            int count = dataGridView1.ColumnCount-2;
+            if (count > 0)
+            {
+                dataGridView1.CurrentCell = dataGridView1[1, flag++];
+                if (flag == count)
+                {
+                    flag = 0;
+                 }
+            }
+            if (count == 0)
+            {
+                 MessageBox.Show("请确保输入了人员信息", "提示");
+            }
+        }
+
+        private void StaffMaintain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            toolStripTextBox1.Text = String.Empty;
         }
        
     }

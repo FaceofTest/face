@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffMaintain));
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("总公司");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("总公司");
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -92,20 +92,14 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sTAFFIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gENDERDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.mINZUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bIRTHDAYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oPHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pHOTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFINFORMATIONBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.faceDataDataSet = new 人脸1.FaceDataDataSet();
             this.sTAFFINFORMATIONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.faceDataDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.faceDataDataSet = new 人脸1.FaceDataDataSet();
             this.sTAFFINFORMATIONTableAdapter = new 人脸1.FaceDataDataSetTableAdapters.STAFFINFORMATIONTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.sTAFFINFORMATIONBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sTAFFINFORMATIONBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -118,9 +112,12 @@
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -234,6 +231,7 @@
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(47, 54);
             this.toolStripButton9.Text = "下一个";
+            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
             // toolStripButton10
             // 
@@ -286,10 +284,10 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(0, 3);
             this.treeView1.Name = "treeView1";
-            treeNode2.Name = "节点0";
-            treeNode2.Text = "总公司";
+            treeNode1.Name = "节点0";
+            treeNode1.Text = "总公司";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode1});
             this.treeView1.Size = new System.Drawing.Size(197, 204);
             this.treeView1.TabIndex = 0;
             this.toolTip1.SetToolTip(this.treeView1, "选中结点后右边列表显示属于该部门的人员信息");
@@ -735,79 +733,24 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sTAFFIDDataGridViewTextBoxColumn,
-            this.nAMEDataGridViewTextBoxColumn,
-            this.gENDERDataGridViewCheckBoxColumn,
-            this.mINZUDataGridViewTextBoxColumn,
-            this.bIRTHDAYDataGridViewTextBoxColumn,
-            this.tITLEDataGridViewTextBoxColumn,
-            this.oPHONEDataGridViewTextBoxColumn,
-            this.pHOTODataGridViewTextBoxColumn,
-            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.sTAFFINFORMATIONBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(213, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(223, 60);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(713, 241);
             this.dataGridView1.TabIndex = 9;
             // 
-            // sTAFFIDDataGridViewTextBoxColumn
+            // sTAFFINFORMATIONBindingSource1
             // 
-            this.sTAFFIDDataGridViewTextBoxColumn.DataPropertyName = "STAFFID";
-            this.sTAFFIDDataGridViewTextBoxColumn.HeaderText = "STAFFID";
-            this.sTAFFIDDataGridViewTextBoxColumn.Name = "sTAFFIDDataGridViewTextBoxColumn";
+            this.sTAFFINFORMATIONBindingSource1.DataMember = "STAFFINFORMATION";
+            this.sTAFFINFORMATIONBindingSource1.DataSource = this.faceDataDataSet;
             // 
-            // nAMEDataGridViewTextBoxColumn
+            // faceDataDataSet
             // 
-            this.nAMEDataGridViewTextBoxColumn.DataPropertyName = "NAME";
-            this.nAMEDataGridViewTextBoxColumn.HeaderText = "NAME";
-            this.nAMEDataGridViewTextBoxColumn.Name = "nAMEDataGridViewTextBoxColumn";
-            // 
-            // gENDERDataGridViewCheckBoxColumn
-            // 
-            this.gENDERDataGridViewCheckBoxColumn.DataPropertyName = "GENDER";
-            this.gENDERDataGridViewCheckBoxColumn.HeaderText = "GENDER";
-            this.gENDERDataGridViewCheckBoxColumn.Name = "gENDERDataGridViewCheckBoxColumn";
-            // 
-            // mINZUDataGridViewTextBoxColumn
-            // 
-            this.mINZUDataGridViewTextBoxColumn.DataPropertyName = "MINZU";
-            this.mINZUDataGridViewTextBoxColumn.HeaderText = "MINZU";
-            this.mINZUDataGridViewTextBoxColumn.Name = "mINZUDataGridViewTextBoxColumn";
-            // 
-            // bIRTHDAYDataGridViewTextBoxColumn
-            // 
-            this.bIRTHDAYDataGridViewTextBoxColumn.DataPropertyName = "BIRTHDAY";
-            this.bIRTHDAYDataGridViewTextBoxColumn.HeaderText = "BIRTHDAY";
-            this.bIRTHDAYDataGridViewTextBoxColumn.Name = "bIRTHDAYDataGridViewTextBoxColumn";
-            // 
-            // tITLEDataGridViewTextBoxColumn
-            // 
-            this.tITLEDataGridViewTextBoxColumn.DataPropertyName = "TITLE";
-            this.tITLEDataGridViewTextBoxColumn.HeaderText = "TITLE";
-            this.tITLEDataGridViewTextBoxColumn.Name = "tITLEDataGridViewTextBoxColumn";
-            // 
-            // oPHONEDataGridViewTextBoxColumn
-            // 
-            this.oPHONEDataGridViewTextBoxColumn.DataPropertyName = "OPHONE";
-            this.oPHONEDataGridViewTextBoxColumn.HeaderText = "OPHONE";
-            this.oPHONEDataGridViewTextBoxColumn.Name = "oPHONEDataGridViewTextBoxColumn";
-            // 
-            // pHOTODataGridViewTextBoxColumn
-            // 
-            this.pHOTODataGridViewTextBoxColumn.DataPropertyName = "PHOTO";
-            this.pHOTODataGridViewTextBoxColumn.HeaderText = "PHOTO";
-            this.pHOTODataGridViewTextBoxColumn.Name = "pHOTODataGridViewTextBoxColumn";
-            // 
-            // dEFAULTDEPTNAMEDataGridViewTextBoxColumn
-            // 
-            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn.DataPropertyName = "DEFAULTDEPTNAME";
-            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn.HeaderText = "DEFAULTDEPTNAME";
-            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn.Name = "dEFAULTDEPTNAMEDataGridViewTextBoxColumn";
+            this.faceDataDataSet.DataSetName = "FaceDataDataSet";
+            this.faceDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sTAFFINFORMATIONBindingSource
             // 
@@ -819,14 +762,19 @@
             this.faceDataDataSetBindingSource.DataSource = this.faceDataDataSet;
             this.faceDataDataSetBindingSource.Position = 0;
             // 
-            // faceDataDataSet
-            // 
-            this.faceDataDataSet.DataSetName = "FaceDataDataSet";
-            this.faceDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // sTAFFINFORMATIONTableAdapter
             // 
             this.sTAFFINFORMATIONTableAdapter.ClearBeforeFill = true;
+            // 
+            // sTAFFINFORMATIONBindingSource2
+            // 
+            this.sTAFFINFORMATIONBindingSource2.DataMember = "STAFFINFORMATION";
+            this.sTAFFINFORMATIONBindingSource2.DataSource = this.faceDataDataSetBindingSource;
+            // 
+            // sTAFFINFORMATIONBindingSource3
+            // 
+            this.sTAFFINFORMATIONBindingSource3.DataMember = "STAFFINFORMATION";
+            this.sTAFFINFORMATIONBindingSource3.DataSource = this.faceDataDataSet;
             // 
             // StaffMaintain
             // 
@@ -845,6 +793,7 @@
             this.Name = "StaffMaintain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "人员维护";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StaffMaintain_FormClosed);
             this.Load += new System.EventHandler(this.StaffMaintain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -862,9 +811,12 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -932,15 +884,6 @@
         private FaceDataDataSet faceDataDataSet;
         private System.Windows.Forms.BindingSource sTAFFINFORMATIONBindingSource;
         private FaceDataDataSetTableAdapters.STAFFINFORMATIONTableAdapter sTAFFINFORMATIONTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nAMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn gENDERDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mINZUDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bIRTHDAYDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tITLEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oPHONEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pHOTODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dEFAULTDEPTNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.RadioButton radioButton6;
@@ -948,5 +891,8 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.BindingSource sTAFFINFORMATIONBindingSource1;
+        private System.Windows.Forms.BindingSource sTAFFINFORMATIONBindingSource2;
+        private System.Windows.Forms.BindingSource sTAFFINFORMATIONBindingSource3;
     }
 }

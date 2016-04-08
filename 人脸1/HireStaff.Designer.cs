@@ -28,19 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.员工编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.faceDataDataSet = new 人脸1.FaceDataDataSet();
+            this.faceDataDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTAFFINFORMATIONBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTAFFINFORMATIONTableAdapter = new 人脸1.FaceDataDataSetTableAdapters.STAFFINFORMATIONTableAdapter();
+            this.sTAFFIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gENDERDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.mINZUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bIRTHDAYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oPHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pHOTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,49 +76,35 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.员工编号,
-            this.姓名});
+            this.sTAFFIDDataGridViewTextBoxColumn,
+            this.nAMEDataGridViewTextBoxColumn,
+            this.gENDERDataGridViewCheckBoxColumn,
+            this.mINZUDataGridViewTextBoxColumn,
+            this.bIRTHDAYDataGridViewTextBoxColumn,
+            this.tITLEDataGridViewTextBoxColumn,
+            this.oPHONEDataGridViewTextBoxColumn,
+            this.pHOTODataGridViewTextBoxColumn,
+            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.sTAFFINFORMATIONBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(49, 46);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(200, 302);
             this.dataGridView1.TabIndex = 2;
             // 
-            // 员工编号
-            // 
-            this.员工编号.HeaderText = "员工编号";
-            this.员工编号.Name = "员工编号";
-            // 
-            // 姓名
-            // 
-            this.姓名.HeaderText = "姓名";
-            this.姓名.Name = "姓名";
-            // 
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
             this.dataGridView2.Location = new System.Drawing.Point(371, 46);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
             this.dataGridView2.Size = new System.Drawing.Size(200, 302);
             this.dataGridView2.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "员工编号";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "姓名";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // button1
             // 
@@ -134,6 +133,79 @@
             this.button3.Text = "关闭";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // faceDataDataSet
+            // 
+            this.faceDataDataSet.DataSetName = "FaceDataDataSet";
+            this.faceDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // faceDataDataSetBindingSource
+            // 
+            this.faceDataDataSetBindingSource.DataSource = this.faceDataDataSet;
+            this.faceDataDataSetBindingSource.Position = 0;
+            // 
+            // sTAFFINFORMATIONBindingSource
+            // 
+            this.sTAFFINFORMATIONBindingSource.DataMember = "STAFFINFORMATION";
+            this.sTAFFINFORMATIONBindingSource.DataSource = this.faceDataDataSet;
+            // 
+            // sTAFFINFORMATIONTableAdapter
+            // 
+            this.sTAFFINFORMATIONTableAdapter.ClearBeforeFill = true;
+            // 
+            // sTAFFIDDataGridViewTextBoxColumn
+            // 
+            this.sTAFFIDDataGridViewTextBoxColumn.DataPropertyName = "STAFFID";
+            this.sTAFFIDDataGridViewTextBoxColumn.HeaderText = "STAFFID";
+            this.sTAFFIDDataGridViewTextBoxColumn.Name = "sTAFFIDDataGridViewTextBoxColumn";
+            // 
+            // nAMEDataGridViewTextBoxColumn
+            // 
+            this.nAMEDataGridViewTextBoxColumn.DataPropertyName = "NAME";
+            this.nAMEDataGridViewTextBoxColumn.HeaderText = "NAME";
+            this.nAMEDataGridViewTextBoxColumn.Name = "nAMEDataGridViewTextBoxColumn";
+            // 
+            // gENDERDataGridViewCheckBoxColumn
+            // 
+            this.gENDERDataGridViewCheckBoxColumn.DataPropertyName = "GENDER";
+            this.gENDERDataGridViewCheckBoxColumn.HeaderText = "GENDER";
+            this.gENDERDataGridViewCheckBoxColumn.Name = "gENDERDataGridViewCheckBoxColumn";
+            // 
+            // mINZUDataGridViewTextBoxColumn
+            // 
+            this.mINZUDataGridViewTextBoxColumn.DataPropertyName = "MINZU";
+            this.mINZUDataGridViewTextBoxColumn.HeaderText = "MINZU";
+            this.mINZUDataGridViewTextBoxColumn.Name = "mINZUDataGridViewTextBoxColumn";
+            // 
+            // bIRTHDAYDataGridViewTextBoxColumn
+            // 
+            this.bIRTHDAYDataGridViewTextBoxColumn.DataPropertyName = "BIRTHDAY";
+            this.bIRTHDAYDataGridViewTextBoxColumn.HeaderText = "BIRTHDAY";
+            this.bIRTHDAYDataGridViewTextBoxColumn.Name = "bIRTHDAYDataGridViewTextBoxColumn";
+            // 
+            // tITLEDataGridViewTextBoxColumn
+            // 
+            this.tITLEDataGridViewTextBoxColumn.DataPropertyName = "TITLE";
+            this.tITLEDataGridViewTextBoxColumn.HeaderText = "TITLE";
+            this.tITLEDataGridViewTextBoxColumn.Name = "tITLEDataGridViewTextBoxColumn";
+            // 
+            // oPHONEDataGridViewTextBoxColumn
+            // 
+            this.oPHONEDataGridViewTextBoxColumn.DataPropertyName = "OPHONE";
+            this.oPHONEDataGridViewTextBoxColumn.HeaderText = "OPHONE";
+            this.oPHONEDataGridViewTextBoxColumn.Name = "oPHONEDataGridViewTextBoxColumn";
+            // 
+            // pHOTODataGridViewTextBoxColumn
+            // 
+            this.pHOTODataGridViewTextBoxColumn.DataPropertyName = "PHOTO";
+            this.pHOTODataGridViewTextBoxColumn.HeaderText = "PHOTO";
+            this.pHOTODataGridViewTextBoxColumn.Name = "pHOTODataGridViewTextBoxColumn";
+            // 
+            // dEFAULTDEPTNAMEDataGridViewTextBoxColumn
+            // 
+            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn.DataPropertyName = "DEFAULTDEPTNAME";
+            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn.HeaderText = "DEFAULTDEPTNAME";
+            this.dEFAULTDEPTNAMEDataGridViewTextBoxColumn.Name = "dEFAULTDEPTNAMEDataGridViewTextBoxColumn";
+            // 
             // HireStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
@@ -150,8 +222,12 @@
             this.Name = "HireStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "录用员工";
+            this.Load += new System.EventHandler(this.HireStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,13 +238,22 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 员工编号;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 姓名;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private FaceDataDataSet faceDataDataSet;
+        private System.Windows.Forms.BindingSource faceDataDataSetBindingSource;
+        private System.Windows.Forms.BindingSource sTAFFINFORMATIONBindingSource;
+        private FaceDataDataSetTableAdapters.STAFFINFORMATIONTableAdapter sTAFFINFORMATIONTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn gENDERDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mINZUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bIRTHDAYDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tITLEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oPHONEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pHOTODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dEFAULTDEPTNAMEDataGridViewTextBoxColumn;
     }
 }
