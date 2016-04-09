@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DivisionalManagement));
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("总公司");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("总公司");
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -128,12 +128,13 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode6.Name = "总公司";
-            treeNode6.Text = "总公司";
+            treeNode1.Name = "总公司";
+            treeNode1.Text = "总公司";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6});
+            treeNode1});
             this.treeView1.Size = new System.Drawing.Size(248, 290);
             this.treeView1.TabIndex = 0;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // contextMenuStrip1
             // 

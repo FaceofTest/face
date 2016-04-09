@@ -122,17 +122,9 @@ namespace 人脸1
             form11.Show();
         }
 
-        private void 忘签到CtrlKToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ForgotHendle form12 = new ForgotHendle();
-            form12.Show();
-        }
+     
 
-        private void 集体迟到早退处理CtrlLToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TimeHandle form13 = new TimeHandle();
-            form13.Show();
-        }
+
 
         private void 出勤记录ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -337,6 +329,12 @@ namespace 人脸1
                 CheakRuleSet crs = new CheakRuleSet();
                 crs.Show();
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Client c = new Client();
+            c.Show();
         }     
   
     }

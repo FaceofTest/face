@@ -96,6 +96,12 @@
     <Compile Include="Checkcompute.Designer.cs">
       <DependentUpon>Checkcompute.cs</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="DelDivision.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,18 +160,6 @@
     </Compile>
     <Compile Include="LeaveSet.Designer.cs">
       <DependentUpon>LeaveSet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ForgotHendle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ForgotHendle.Designer.cs">
-      <DependentUpon>ForgotHendle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TimeHandle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TimeHandle.Designer.cs">
-      <DependentUpon>TimeHandle.cs</DependentUpon>
     </Compile>
     <Compile Include="HireStaff.cs">
       <SubType>Form</SubType>
@@ -306,6 +300,9 @@
     <EmbeddedResource Include="Checkcompute.resx">
       <DependentUpon>Checkcompute.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DelDivision.resx">
       <DependentUpon>DelDivision.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,12 +329,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LeaveSet.resx">
       <DependentUpon>LeaveSet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ForgotHendle.resx">
-      <DependentUpon>ForgotHendle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TimeHandle.resx">
-      <DependentUpon>TimeHandle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HireStaff.resx">
       <DependentUpon>HireStaff.cs</DependentUpon>
@@ -448,6 +439,44 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

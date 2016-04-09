@@ -153,10 +153,20 @@ namespace 人脸1
                 else
                 {
                     String number = sm.textBox1.Text.Trim();
-                    bmp.Save("Images//" + number + ".bmp");
-                    String dir = System.Environment.CurrentDirectory + "\\Images\\" + number + ".bmp";
+                     String dir = System.Environment.CurrentDirectory + "\\Images\\" + number + ".bmp";
+                     if (File.Exists(@dir))
+                     {
+                         File.Delete(@dir);
+                         bmp.Save("Images//" + number + ".bmp");
+                         bmp.Dispose();                          //记得释放 不然会提醒文件被另一进程使用。
+                     }
+                     else
+                     {
+                         bmp.Save("Images//" + number + ".bmp");
+                         bmp.Dispose();
+                     }
                     if (File.Exists(@dir))
-                    {
+                    {   
                         sm.pictureBox1.Image = Image.FromFile(dir);
                         sm.pictureBox1.ImageLocation = @dir;
                     }

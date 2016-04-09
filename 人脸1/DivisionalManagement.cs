@@ -28,7 +28,7 @@ namespace 人脸1
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            HireStaff hs = new HireStaff();
+            HireStaff hs = new HireStaff(this);
             hs.Show();
         }
 
@@ -51,7 +51,7 @@ namespace 人脸1
                 tn.Name = dataTable.Rows[m][0].ToString();
                 treeView1.Nodes[0].Nodes.Add(tn);    
             }
-              
+            toolStripButton4.Enabled = false; 
           
         }
 
@@ -60,5 +60,18 @@ namespace 人脸1
             DivisionRename dr = new DivisionRename(this);
             dr.Show();
         }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (treeView1.Nodes[0].Nodes.Count != 0 && !treeView1.Nodes[0].IsSelected)
+            {
+                toolStripButton4.Enabled = true;
+            }
+            if (treeView1.Nodes[0].IsSelected)
+            {
+                toolStripButton4.Enabled = false;
+            }
+        }
+
     }
 }

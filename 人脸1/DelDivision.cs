@@ -50,11 +50,10 @@ namespace 人脸1
                 int count = dm.treeView1.Nodes[0].Nodes.Count;
                 if (count > 0)
                 {
-                    for (int m = 0; m <=count; m++)
+                    for (int m = 0; m <count; m++)
                     {
                         if (dm.treeView1.Nodes[0].Nodes[m].Name == name)
                         {
-                        //  TreeNode tn =  dm.treeView1.Nodes[0].Nodes[m];
                           dm.treeView1.Nodes[0].Nodes[m].Remove();
                             break;
                         }

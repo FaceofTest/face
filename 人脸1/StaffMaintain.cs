@@ -18,6 +18,7 @@ namespace 人脸1
         public StaffMaintain()
         {
             InitializeComponent();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
