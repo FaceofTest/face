@@ -47,9 +47,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\FaceCore.OpenPlatform.DTO.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,11 +75,11 @@
     <Compile Include="AddDepartment.Designer.cs">
       <DependentUpon>AddDepartment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alterlog.cs">
+    <Compile Include="CheckReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alterlog.Designer.cs">
-      <DependentUpon>Alterlog.cs</DependentUpon>
+    <Compile Include="CheckReport.Designer.cs">
+      <DependentUpon>CheckReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Camera.cs">
       <SubType>Form</SubType>
@@ -102,6 +105,11 @@
     <Compile Include="Client.Designer.cs">
       <DependentUpon>Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DelDivision.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +121,12 @@
     </Compile>
     <Compile Include="DelMessage.Designer.cs">
       <DependentUpon>DelMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentReport.Designer.cs">
+      <DependentUpon>DepartmentReport.cs</DependentUpon>
     </Compile>
     <Compile Include="DivisionRename.cs">
       <SubType>Form</SubType>
@@ -126,16 +140,17 @@
     <Compile Include="EquipmentManage.Designer.cs">
       <DependentUpon>EquipmentManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FaceDataDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FaceDataDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffReport.Designer.cs">
+      <DependentUpon>staffReport.cs</DependentUpon>
     </Compile>
     <Compile Include="StaffSchedu.cs">
       <SubType>Form</SubType>
@@ -277,19 +292,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TestDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AboutSys.resx">
       <DependentUpon>AboutSys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddDepartment.resx">
       <DependentUpon>AddDepartment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alterlog.resx">
-      <DependentUpon>Alterlog.cs</DependentUpon>
+    <EmbeddedResource Include="CheckReport.resx">
+      <DependentUpon>CheckReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Camera.resx">
       <DependentUpon>Camera.cs</DependentUpon>
@@ -309,6 +319,9 @@
     <EmbeddedResource Include="DelMessage.resx">
       <DependentUpon>DelMessage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentReport.resx">
+      <DependentUpon>DepartmentReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DivisionRename.resx">
       <DependentUpon>DivisionRename.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="staffReport.resx">
+      <DependentUpon>staffReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffSchedu.resx">
       <DependentUpon>StaffSchedu.cs</DependentUpon>
@@ -396,16 +415,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="FaceDataDataSet.xsc">
-      <DependentUpon>FaceDataDataSet.xsd</DependentUpon>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="FaceDataDataSet.xsd">
+    <None Include="DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FaceDataDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="FaceDataDataSet.xss">
-      <DependentUpon>FaceDataDataSet.xsd</DependentUpon>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -416,17 +435,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TestDataSet.xsc">
-      <DependentUpon>TestDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TestDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TestDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TestDataSet.xss">
-      <DependentUpon>TestDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

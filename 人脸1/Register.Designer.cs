@@ -247,7 +247,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private bool judgebutton1click = false;
+    //    private bool judgebutton1click = false;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;

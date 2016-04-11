@@ -38,7 +38,6 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
@@ -93,10 +92,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sTAFFINFORMATIONBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.faceDataDataSet = new 人脸1.FaceDataDataSet();
             this.sTAFFINFORMATIONBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.faceDataDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sTAFFINFORMATIONTableAdapter = new 人脸1.FaceDataDataSetTableAdapters.STAFFINFORMATIONTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.sTAFFINFORMATIONBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.sTAFFINFORMATIONBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -113,9 +109,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource3)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +124,6 @@
             this.toolStripButton4,
             this.toolStripButton5,
             this.toolStripButton6,
-            this.toolStripButton7,
             this.toolStripTextBox1,
             this.toolStripButton8,
             this.toolStripButton9,
@@ -197,15 +190,7 @@
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(35, 54);
             this.toolStripButton6.Text = "取消";
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(47, 54);
-            this.toolStripButton7.Text = "批量加";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // toolStripTextBox1
             // 
@@ -742,40 +727,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(713, 241);
             this.dataGridView1.TabIndex = 9;
             // 
-            // sTAFFINFORMATIONBindingSource1
-            // 
-            this.sTAFFINFORMATIONBindingSource1.DataMember = "STAFFINFORMATION";
-            this.sTAFFINFORMATIONBindingSource1.DataSource = this.faceDataDataSet;
-            // 
-            // faceDataDataSet
-            // 
-            this.faceDataDataSet.DataSetName = "FaceDataDataSet";
-            this.faceDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sTAFFINFORMATIONBindingSource
-            // 
-            this.sTAFFINFORMATIONBindingSource.DataMember = "STAFFINFORMATION";
-            this.sTAFFINFORMATIONBindingSource.DataSource = this.faceDataDataSetBindingSource;
-            // 
-            // faceDataDataSetBindingSource
-            // 
-            this.faceDataDataSetBindingSource.DataSource = this.faceDataDataSet;
-            this.faceDataDataSetBindingSource.Position = 0;
-            // 
-            // sTAFFINFORMATIONTableAdapter
-            // 
-            this.sTAFFINFORMATIONTableAdapter.ClearBeforeFill = true;
-            // 
-            // sTAFFINFORMATIONBindingSource2
-            // 
-            this.sTAFFINFORMATIONBindingSource2.DataMember = "STAFFINFORMATION";
-            this.sTAFFINFORMATIONBindingSource2.DataSource = this.faceDataDataSetBindingSource;
-            // 
-            // sTAFFINFORMATIONBindingSource3
-            // 
-            this.sTAFFINFORMATIONBindingSource3.DataMember = "STAFFINFORMATION";
-            this.sTAFFINFORMATIONBindingSource3.DataSource = this.faceDataDataSet;
-            // 
             // StaffMaintain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
@@ -812,9 +763,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource3)).EndInit();
             this.ResumeLayout(false);
@@ -831,7 +780,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
@@ -878,12 +826,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TreeView treeView1;
-        private DivisionalManagement dm;
+ //       private DivisionalManagement dm;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource faceDataDataSetBindingSource;
-        private FaceDataDataSet faceDataDataSet;
         private System.Windows.Forms.BindingSource sTAFFINFORMATIONBindingSource;
-        private FaceDataDataSetTableAdapters.STAFFINFORMATIONTableAdapter sTAFFINFORMATIONTableAdapter;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.RadioButton radioButton6;

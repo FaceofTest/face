@@ -20,12 +20,6 @@ namespace 人脸1
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Alterlog al = new Alterlog();
-            al.Show();
-        }
-
         private void Record_Load(object sender, EventArgs e)
         {
             String sql = @"select DEPARTMENTNAME from DEPARTMENT";

@@ -381,6 +381,15 @@ namespace 人脸1
         {
             toolStripTextBox1.Text = String.Empty;
         }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+      
+
+      
        
     }
 }

@@ -220,12 +220,9 @@ namespace 人脸1
 
 
         private void 统计报表ToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("没有数据设置", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
+        {         
                 Checkcompute cc = new Checkcompute();
                 cc.Show();
-            }
         
         }
 
@@ -335,7 +332,9 @@ namespace 人脸1
         {
             Client c = new Client();
             c.Show();
-        }     
+        }
+
+            
   
     }
    

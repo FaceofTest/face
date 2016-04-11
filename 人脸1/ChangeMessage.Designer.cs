@@ -38,9 +38,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.testDataSet = new 人脸1.TestDataSet();
+           
             this.faceDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.faceDataTableAdapter = new 人脸1.TestDataSetTableAdapters.FaceDataTableAdapter();
+  
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).BeginInit();
+          
             ((System.ComponentModel.ISupportInitialize)(this.faceDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -147,17 +147,14 @@
             // 
             // testDataSet
             // 
-            this.testDataSet.DataSetName = "TestDataSet";
-            this.testDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+         
             // faceDataBindingSource
             // 
-            this.faceDataBindingSource.DataMember = "FaceData";
-            this.faceDataBindingSource.DataSource = this.testDataSet;
+        
             // 
             // faceDataTableAdapter
             // 
-            this.faceDataTableAdapter.ClearBeforeFill = true;
+        
             // 
             // label5
             // 
@@ -295,7 +292,6 @@
             this.Text = "修改人员信息";
             this.Load += new System.EventHandler(this.ChangeMessage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faceDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -316,9 +312,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private TestDataSet testDataSet;
         private System.Windows.Forms.BindingSource faceDataBindingSource;
-        private TestDataSetTableAdapters.FaceDataTableAdapter faceDataTableAdapter;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

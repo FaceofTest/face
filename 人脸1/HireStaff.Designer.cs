@@ -33,16 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sTAFFINFORMATIONBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.faceDataDataSet = new 人脸1.FaceDataDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.faceDataDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sTAFFINFORMATIONTableAdapter = new 人脸1.FaceDataDataSetTableAdapters.STAFFINFORMATIONTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -79,12 +76,10 @@
             // sTAFFINFORMATIONBindingSource
             // 
             this.sTAFFINFORMATIONBindingSource.DataMember = "STAFFINFORMATION";
-            this.sTAFFINFORMATIONBindingSource.DataSource = this.faceDataDataSet;
             // 
             // faceDataDataSet
             // 
-            this.faceDataDataSet.DataSetName = "FaceDataDataSet";
-            this.faceDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+         
             // 
             // dataGridView2
             // 
@@ -128,13 +123,10 @@
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // faceDataDataSetBindingSource
-            // 
-            this.faceDataDataSetBindingSource.DataSource = this.faceDataDataSet;
-            this.faceDataDataSetBindingSource.Position = 0;
+      
             // 
             // sTAFFINFORMATIONTableAdapter
             // 
-            this.sTAFFINFORMATIONTableAdapter.ClearBeforeFill = true;
             // 
             // HireStaff
             // 
@@ -155,7 +147,6 @@
             this.Load += new System.EventHandler(this.HireStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTAFFINFORMATIONBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faceDataDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -172,10 +163,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private FaceDataDataSet faceDataDataSet;
+        
         private System.Windows.Forms.BindingSource faceDataDataSetBindingSource;
         private System.Windows.Forms.BindingSource sTAFFINFORMATIONBindingSource;
-        private FaceDataDataSetTableAdapters.STAFFINFORMATIONTableAdapter sTAFFINFORMATIONTableAdapter;
         private DivisionalManagement dm;
     }
 }

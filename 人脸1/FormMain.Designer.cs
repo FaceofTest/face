@@ -29,40 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("导入考勤数据");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("导出考勤数据");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("备份数据库");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("数据管理", new System.Windows.Forms.TreeNode[] {
-            treeNode39,
-            treeNode40,
-            treeNode41});
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("设备管理");
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("有关设备操作", new System.Windows.Forms.TreeNode[] {
-            treeNode43,
-            treeNode44,
-            treeNode45,
-            treeNode46});
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("管理员设置");
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("人员维护");
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("数据库设置");
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("部门表");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("设备/维护", new System.Windows.Forms.TreeNode[] {
-            treeNode48,
-            treeNode49,
-            treeNode50,
-            treeNode51});
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("时间段维护");
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("人员排班");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("班次管理");
-            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("考勤规则");
-            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("人员排班", new System.Windows.Forms.TreeNode[] {
-            treeNode53,
-            treeNode54,
-            treeNode55,
-            treeNode56});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("导入考勤数据");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("导出考勤数据");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("备份数据库");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("数据管理", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("设备管理");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("有关设备操作", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("管理员设置");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("人员维护");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("数据库设置");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("部门表");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("设备/维护", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13});
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("时间段维护");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("人员排班");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("班次管理");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("考勤规则");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("人员排班", new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18});
             this.人脸注册 = new System.Windows.Forms.Button();
             this.面部识别 = new System.Windows.Forms.Button();
             this.指纹识别 = new System.Windows.Forms.Button();
@@ -102,8 +102,6 @@
             this.考勤规则RToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.假类设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.数据库设置OToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
             this.设备管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.连接设备ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.断开设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,6 +136,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.退出系统 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -177,7 +176,6 @@
             this.设备名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.对比方式 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -437,9 +435,7 @@
             this.节日维护HToolStripMenuItem,
             this.考勤规则RToolStripMenuItem,
             this.假类设置ToolStripMenuItem,
-            this.toolStripSeparator10,
-            this.数据库设置OToolStripMenuItem,
-            this.toolStripSeparator16});
+            this.toolStripSeparator10});
             this.维护设置ToolStripMenuItem.Name = "维护设置ToolStripMenuItem";
             this.维护设置ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.维护设置ToolStripMenuItem.Text = "维护/设置（&C）";
@@ -447,90 +443,79 @@
             // 部门管理DToolStripMenuItem
             // 
             this.部门管理DToolStripMenuItem.Name = "部门管理DToolStripMenuItem";
-            this.部门管理DToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.部门管理DToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.部门管理DToolStripMenuItem.Text = "部门管理（&D）";
             this.部门管理DToolStripMenuItem.Click += new System.EventHandler(this.部门管理DToolStripMenuItem_Click);
             // 
             // 人员维护CtrlEToolStripMenuItem
             // 
             this.人员维护CtrlEToolStripMenuItem.Name = "人员维护CtrlEToolStripMenuItem";
-            this.人员维护CtrlEToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.人员维护CtrlEToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.人员维护CtrlEToolStripMenuItem.Text = "人员维护 Ctrl+E";
             this.人员维护CtrlEToolStripMenuItem.Click += new System.EventHandler(this.人员维护CtrlEToolStripMenuItem_Click);
             // 
             // 管理员设置AToolStripMenuItem
             // 
             this.管理员设置AToolStripMenuItem.Name = "管理员设置AToolStripMenuItem";
-            this.管理员设置AToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.管理员设置AToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.管理员设置AToolStripMenuItem.Text = "管理员设置（&A）";
             this.管理员设置AToolStripMenuItem.Click += new System.EventHandler(this.管理员设置AToolStripMenuItem_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(163, 6);
             // 
             // 时间段维护ToolStripMenuItem
             // 
             this.时间段维护ToolStripMenuItem.Name = "时间段维护ToolStripMenuItem";
-            this.时间段维护ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.时间段维护ToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.时间段维护ToolStripMenuItem.Text = "时间段维护";
             this.时间段维护ToolStripMenuItem.Click += new System.EventHandler(this.时间段维护ToolStripMenuItem_Click);
             // 
             // 班次管理ToolStripMenuItem
             // 
             this.班次管理ToolStripMenuItem.Name = "班次管理ToolStripMenuItem";
-            this.班次管理ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.班次管理ToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.班次管理ToolStripMenuItem.Text = "班次管理";
             this.班次管理ToolStripMenuItem.Click += new System.EventHandler(this.班次管理ToolStripMenuItem_Click);
             // 
             // 人员排班ToolStripMenuItem
             // 
             this.人员排班ToolStripMenuItem.Name = "人员排班ToolStripMenuItem";
-            this.人员排班ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.人员排班ToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.人员排班ToolStripMenuItem.Text = "人员排班";
             this.人员排班ToolStripMenuItem.Click += new System.EventHandler(this.人员排班ToolStripMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(163, 6);
             // 
             // 节日维护HToolStripMenuItem
             // 
             this.节日维护HToolStripMenuItem.Name = "节日维护HToolStripMenuItem";
-            this.节日维护HToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.节日维护HToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.节日维护HToolStripMenuItem.Text = "节日维护（&H）";
             this.节日维护HToolStripMenuItem.Click += new System.EventHandler(this.节日维护HToolStripMenuItem_Click);
             // 
             // 考勤规则RToolStripMenuItem
             // 
             this.考勤规则RToolStripMenuItem.Name = "考勤规则RToolStripMenuItem";
-            this.考勤规则RToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.考勤规则RToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.考勤规则RToolStripMenuItem.Text = "考勤规则（&R）";
             this.考勤规则RToolStripMenuItem.Click += new System.EventHandler(this.考勤规则RToolStripMenuItem_Click);
             // 
             // 假类设置ToolStripMenuItem
             // 
             this.假类设置ToolStripMenuItem.Name = "假类设置ToolStripMenuItem";
-            this.假类设置ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.假类设置ToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.假类设置ToolStripMenuItem.Text = "假类设置";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(165, 6);
-            // 
-            // 数据库设置OToolStripMenuItem
-            // 
-            this.数据库设置OToolStripMenuItem.Name = "数据库设置OToolStripMenuItem";
-            this.数据库设置OToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.数据库设置OToolStripMenuItem.Text = "数据库设置（&O）";
-            // 
-            // toolStripSeparator16
-            // 
-            this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(163, 6);
             // 
             // 设备管理ToolStripMenuItem
             // 
@@ -797,6 +782,16 @@
             this.panel1.Size = new System.Drawing.Size(230, 539);
             this.panel1.TabIndex = 8;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(146, 363);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(70, 125);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "模拟客户端";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // treeView1
             // 
             this.treeView1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -804,54 +799,54 @@
             this.treeView1.LineColor = System.Drawing.Color.Maroon;
             this.treeView1.Location = new System.Drawing.Point(3, 12);
             this.treeView1.Name = "treeView1";
-            treeNode39.Name = "导入考勤数据";
-            treeNode39.Text = "导入考勤数据";
-            treeNode40.Name = "导出考勤数据";
-            treeNode40.Text = "导出考勤数据";
-            treeNode41.Name = "备份数据库";
-            treeNode41.Text = "备份数据库";
-            treeNode42.Checked = true;
-            treeNode42.ForeColor = System.Drawing.Color.Blue;
-            treeNode42.Name = "节点0";
-            treeNode42.Text = "数据管理";
-            treeNode43.Name = "从设备下载记录数据";
-            treeNode43.Text = "从设备下载记录数据";
-            treeNode44.Name = "从设备下载人员信息";
-            treeNode44.Text = "从设备下载记录数据";
-            treeNode45.Name = "上传人员信息到设备";
-            treeNode45.Text = "从设备下载记录数据";
-            treeNode46.Name = "设备管理";
-            treeNode46.Text = "设备管理";
-            treeNode47.ForeColor = System.Drawing.Color.Blue;
-            treeNode47.Name = "有关设备操作";
-            treeNode47.Text = "有关设备操作";
-            treeNode48.Name = "管理员设置";
-            treeNode48.Text = "管理员设置";
-            treeNode49.Name = "人员维护";
-            treeNode49.Text = "人员维护";
-            treeNode50.Name = "数据库设置";
-            treeNode50.Text = "数据库设置";
-            treeNode51.Name = "部门表";
-            treeNode51.Text = "部门表";
-            treeNode52.ForeColor = System.Drawing.Color.Blue;
-            treeNode52.Name = "设备/维护";
-            treeNode52.Text = "设备/维护";
-            treeNode53.Name = "时间段维护";
-            treeNode53.Text = "时间段维护";
-            treeNode54.Name = "人员排班";
-            treeNode54.Text = "人员排班";
-            treeNode55.Name = "班次管理";
-            treeNode55.Text = "班次管理";
-            treeNode56.Name = "考勤规则";
-            treeNode56.Text = "考勤规则";
-            treeNode57.ForeColor = System.Drawing.Color.Blue;
-            treeNode57.Name = "人员排班";
-            treeNode57.Text = "人员排班";
+            treeNode1.Name = "导入考勤数据";
+            treeNode1.Text = "导入考勤数据";
+            treeNode2.Name = "导出考勤数据";
+            treeNode2.Text = "导出考勤数据";
+            treeNode3.Name = "备份数据库";
+            treeNode3.Text = "备份数据库";
+            treeNode4.Checked = true;
+            treeNode4.ForeColor = System.Drawing.Color.Blue;
+            treeNode4.Name = "节点0";
+            treeNode4.Text = "数据管理";
+            treeNode5.Name = "从设备下载记录数据";
+            treeNode5.Text = "从设备下载记录数据";
+            treeNode6.Name = "从设备下载人员信息";
+            treeNode6.Text = "从设备下载记录数据";
+            treeNode7.Name = "上传人员信息到设备";
+            treeNode7.Text = "从设备下载记录数据";
+            treeNode8.Name = "设备管理";
+            treeNode8.Text = "设备管理";
+            treeNode9.ForeColor = System.Drawing.Color.Blue;
+            treeNode9.Name = "有关设备操作";
+            treeNode9.Text = "有关设备操作";
+            treeNode10.Name = "管理员设置";
+            treeNode10.Text = "管理员设置";
+            treeNode11.Name = "人员维护";
+            treeNode11.Text = "人员维护";
+            treeNode12.Name = "数据库设置";
+            treeNode12.Text = "数据库设置";
+            treeNode13.Name = "部门表";
+            treeNode13.Text = "部门表";
+            treeNode14.ForeColor = System.Drawing.Color.Blue;
+            treeNode14.Name = "设备/维护";
+            treeNode14.Text = "设备/维护";
+            treeNode15.Name = "时间段维护";
+            treeNode15.Text = "时间段维护";
+            treeNode16.Name = "人员排班";
+            treeNode16.Text = "人员排班";
+            treeNode17.Name = "班次管理";
+            treeNode17.Text = "班次管理";
+            treeNode18.Name = "考勤规则";
+            treeNode18.Text = "考勤规则";
+            treeNode19.ForeColor = System.Drawing.Color.Blue;
+            treeNode19.Name = "人员排班";
+            treeNode19.Text = "人员排班";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode42,
-            treeNode47,
-            treeNode52,
-            treeNode57});
+            treeNode4,
+            treeNode9,
+            treeNode14,
+            treeNode19});
             this.treeView1.Size = new System.Drawing.Size(203, 329);
             this.treeView1.TabIndex = 0;
             this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
@@ -1116,16 +1111,6 @@
             this.对比方式.HeaderText = "对比方式";
             this.对比方式.Name = "对比方式";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(146, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 125);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "模拟客户端";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1208,7 +1193,6 @@
         private System.Windows.Forms.ToolStripMenuItem 节日维护HToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 考勤规则RToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 假类设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 数据库设置OToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 设备管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 连接设备ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 断开设置ToolStripMenuItem;
@@ -1285,7 +1269,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 考勤记录;
         private System.Windows.Forms.DataGridViewTextBoxColumn 序列号;
         private System.Windows.Forms.ToolStripMenuItem 人员排班ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
         private System.Windows.Forms.Button button2;
     }
 
