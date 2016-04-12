@@ -49,5 +49,17 @@ namespace 人脸1
             staffReport sr = new staffReport();
             sr.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LeaveSetReport lsr = new LeaveSetReport();
+            lsr.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FestivalSetReport fs = new FestivalSetReport();
+            fs.Show();
+        }
     }
 }

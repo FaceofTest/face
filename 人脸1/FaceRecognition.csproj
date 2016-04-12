@@ -75,6 +75,12 @@
     <Compile Include="AddDepartment.Designer.cs">
       <DependentUpon>AddDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet２.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet２.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DelDivision.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,11 +151,34 @@
     <Compile Include="EquipmentManage.Designer.cs">
       <DependentUpon>EquipmentManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FaceDataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FaceDataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FestivalSetReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FestivalSetReport.Designer.cs">
+      <DependentUpon>FestivalSetReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HolidaySet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HolidaySet.Designer.cs">
+      <DependentUpon>HolidaySet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveSetReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveSetReport.Designer.cs">
+      <DependentUpon>LeaveSetReport.cs</DependentUpon>
     </Compile>
     <Compile Include="staffReport.cs">
       <SubType>Form</SubType>
@@ -230,18 +264,6 @@
     <Compile Include="SysHint.Designer.cs">
       <DependentUpon>SysHint.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShiftManage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ShiftManage.Designer.cs">
-      <DependentUpon>ShiftManage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CheckSet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CheckSet.Designer.cs">
-      <DependentUpon>CheckSet.cs</DependentUpon>
-    </Compile>
     <Compile Include="FestivalSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +320,9 @@
     <EmbeddedResource Include="AddDepartment.resx">
       <DependentUpon>AddDepartment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckReport.resx">
       <DependentUpon>CheckReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,12 +353,23 @@
     <EmbeddedResource Include="EquipmentManage.resx">
       <DependentUpon>EquipmentManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FestivalSetReport.resx">
+      <DependentUpon>FestivalSetReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HolidaySet.resx">
+      <DependentUpon>HolidaySet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveSetReport.resx">
+      <DependentUpon>LeaveSetReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="staffReport.resx">
       <DependentUpon>staffReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,12 +411,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SysHint.resx">
       <DependentUpon>SysHint.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShiftManage.resx">
-      <DependentUpon>ShiftManage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CheckSet.resx">
-      <DependentUpon>CheckSet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FestivalSet.resx">
       <DependentUpon>FestivalSet.cs</DependentUpon>
@@ -425,6 +455,28 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet２.xsc">
+      <DependentUpon>DataSet２.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet２.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet２.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet２.xss">
+      <DependentUpon>DataSet２.xsd</DependentUpon>
+    </None>
+    <None Include="FaceDataDataSet.xsc">
+      <DependentUpon>FaceDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FaceDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FaceDataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FaceDataDataSet.xss">
+      <DependentUpon>FaceDataDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

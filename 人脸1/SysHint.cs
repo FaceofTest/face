@@ -17,15 +17,12 @@ namespace 人脸1
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CheckSet form22 = new CheckSet();
-            form22.Show();
-        }
+       
     }
 }

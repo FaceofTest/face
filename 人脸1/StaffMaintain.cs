@@ -83,6 +83,17 @@ namespace 人脸1
         {
             if (judgeVaild() == "")
             {
+                // 初始化人员信息密码
+                string sq = "insert into STAFFPASSWORD(STAFFID,NAME,PASSWORD) values(@STAFFID,@NAME,@PASSWORD)";
+                List<SqlParameter> paras1 = new List<SqlParameter>();
+                paras1.Add(new SqlParameter("@STAFFID", textBox1.Text.Trim())); //人员编号
+                paras1.Add(new SqlParameter("@NAME", textBox6.Text.Trim()));    //姓名
+                paras1.Add(new SqlParameter("@PASSWORD", textBox1.Text.Trim()));    //密码为初始密码 即人员编号
+                SqlCommand cmd1 = new SqlCommand(sq);//执行sql语句
+                cmd1.Parameters.AddRange(paras1.ToArray());//添加
+                var db1 = new DBHelper("MyCN");
+                db1.ExecuteNonQuery(cmd1);
+                //注册
                 string sql = "insert into STAFFINFORMATION (STAFFID,NAME,GENDER,MINZU,BIRTHDAY,TITLE,OPHONE,PHOTO,DEPARTMENTNAME) values(@STAFFID,@NAME,@GENDER,@MINZU,@BIRTHDAY,@TITLE,@OPHONE,@PHOTO,@DEPARTMENTNAME)";//往数据库FaceDate中插入数据
                 List<SqlParameter> paras = new List<SqlParameter>();
                 paras.Add(new SqlParameter("@STAFFID", textBox1.Text.Trim())); //人员编号

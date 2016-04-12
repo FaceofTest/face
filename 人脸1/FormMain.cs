@@ -15,9 +15,11 @@ namespace 人脸1
 {
     public partial class FormMain : Form
     {
-        public FormMain()
+        public FormMain(Admin ad,bool flag)
         {
             InitializeComponent();
+            this.ad = ad;
+            this.flag = flag;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,6 +58,7 @@ namespace 人脸1
             if (dr == DialogResult.Yes)
             {
                 e.Cancel = false;
+                this.ad.Close();
             }
             else
             {
@@ -163,18 +166,6 @@ namespace 人脸1
         }
 
         private void 时间段维护ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SysHint form20 = new SysHint();
-            form20.Show();
-        }
-
-        private void 班次管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ShiftManage form21 = new ShiftManage();
-            form21.Show();
-        }
-
-        private void 人员排班ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SysHint form20 = new SysHint();
             form20.Show();
@@ -317,12 +308,6 @@ namespace 人脸1
             }
             if (treeView1.Nodes[3].Nodes[2].IsSelected == true)
             {
-
-                ShiftManage shm = new ShiftManage();
-                shm.Show();
-            }
-            if (treeView1.Nodes[3].Nodes[3].IsSelected == true)
-            {
                 CheakRuleSet crs = new CheakRuleSet();
                 crs.Show();
             }
@@ -332,6 +317,17 @@ namespace 人脸1
         {
             Client c = new Client();
             c.Show();
+        }
+
+        private void 人员排班ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 假类设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HolidaySet hs = new HolidaySet();
+            hs.Show();
         }
 
             

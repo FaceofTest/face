@@ -85,6 +85,9 @@ namespace 人脸1
                     if (i != 0)
                     {
                          MessageBox.Show("请假成功", "提示");
+                         this.comboBox1.Text = String.Empty;
+                         this.comboBox2.Text = String.Empty;
+                         this.textBox2.Text = String.Empty;
                     }
                     else
                     {
@@ -96,12 +99,19 @@ namespace 人脸1
             }
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+ 
+
+        private void button3_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text.Equals("总公司"))
-            {
-                comboBox2.Text = "全体员工";
-            }
+            string commandText1 = @"select ID as '序号', NAME as '姓名',DEPARTMENTNAME as '部门名称',TIMESTART as '请假开始时间',TIMEEND as '请假截止时间',REASON as '请假理由' from LEAVE;";
+            SqlCommand cmd1 = new SqlCommand(commandText1);//执行sql语句
+            var db = new DBHelper("MyCN");
+            var dataTable1 = db.ExecuteDataTable(cmd1);
+            dataGridView1.DataSource = dataTable1;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
             String DepartmentName = comboBox1.SelectedItem.ToString();
             String sql = @"select NAME from STAFFINFORMATION Where DEPARTMENTNAME = '" + DepartmentName + "'";
             SqlCommand cmd = new SqlCommand(sql);//执行sql语句
@@ -113,15 +123,6 @@ namespace 人脸1
                 comboBox2.Items.Add(dataTable.Rows[m][0].ToString());
 
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string commandText1 = @"select ID as '序号', NAME as '姓名',DEPARTMENTNAME as '部门名称',TIMESTART as '请假开始时间',TIMEEND as '请假截止时间',REASON as '请假理由' from LEAVE;";
-            SqlCommand cmd1 = new SqlCommand(commandText1);//执行sql语句
-            var db = new DBHelper("MyCN");
-            var dataTable1 = db.ExecuteDataTable(cmd1);
-            dataGridView1.DataSource = dataTable1;
         }
 
     }
