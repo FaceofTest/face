@@ -26,6 +26,15 @@ namespace 人脸1
         {
         
             this.toolStripStatusLabel2.Text = "系统当前时间：" + DateTime.Now.ToShortDateString();
+            if (flag == false)
+            {
+                考勤处理EToolStripMenuItem.Enabled = false;
+                维护设置ToolStripMenuItem.Enabled = false;
+                设备管理ToolStripMenuItem.Enabled = false;
+                设备维护.Enabled = false;
+                treeView1.Enabled = false;
+                数据ToolStripMenuItem.Enabled = false;
+            }
 
         }
 
@@ -220,6 +229,12 @@ namespace 人脸1
         private void 人员维护_Click(object sender, EventArgs e)
         {
             StaffMaintain sm = new StaffMaintain();
+            if (flag == false)
+            {
+                sm.toolStripButton5.Enabled = false;
+                sm.label1.Enabled = false;
+                sm.button6.Enabled = false;
+            }
             sm.Show();
         }
 
@@ -329,6 +344,8 @@ namespace 人脸1
             HolidaySet hs = new HolidaySet();
             hs.Show();
         }
+
+    
 
             
   

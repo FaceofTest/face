@@ -29,41 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("导入考勤数据");
-            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("导出考勤数据");
-            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("备份数据库");
-            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("数据管理", new System.Windows.Forms.TreeNode[] {
-            treeNode73,
-            treeNode74,
-            treeNode75});
-            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
-            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
-            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
-            System.Windows.Forms.TreeNode treeNode80 = new System.Windows.Forms.TreeNode("设备管理");
-            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("有关设备操作", new System.Windows.Forms.TreeNode[] {
-            treeNode77,
-            treeNode78,
-            treeNode79,
-            treeNode80});
-            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("管理员设置");
-            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("人员维护");
-            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("数据库设置");
-            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("部门表");
-            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("设备/维护", new System.Windows.Forms.TreeNode[] {
-            treeNode82,
-            treeNode83,
-            treeNode84,
-            treeNode85});
-            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("时间段维护");
-            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("班次管理");
-            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("考勤规则");
-            System.Windows.Forms.TreeNode treeNode90 = new System.Windows.Forms.TreeNode("人员排班", new System.Windows.Forms.TreeNode[] {
-            treeNode87,
-            treeNode88,
-            treeNode89});
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("导入考勤数据");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("导出考勤数据");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("备份数据库");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("数据管理", new System.Windows.Forms.TreeNode[] {
+            treeNode19,
+            treeNode20,
+            treeNode21});
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("从设备下载记录数据");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("设备管理");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("有关设备操作", new System.Windows.Forms.TreeNode[] {
+            treeNode23,
+            treeNode24,
+            treeNode25,
+            treeNode26});
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("管理员设置");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("人员维护");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("数据库设置");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("部门表");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("设备/维护", new System.Windows.Forms.TreeNode[] {
+            treeNode28,
+            treeNode29,
+            treeNode30,
+            treeNode31});
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("时间段维护");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("班次管理");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("考勤规则");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("人员排班", new System.Windows.Forms.TreeNode[] {
+            treeNode33,
+            treeNode34,
+            treeNode35});
             this.人脸注册 = new System.Windows.Forms.Button();
             this.面部识别 = new System.Windows.Forms.Button();
-            this.指纹识别 = new System.Windows.Forms.Button();
             this.管理人员 = new System.Windows.Forms.Button();
             this.查询信息 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -144,7 +143,6 @@
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.设置名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.状态 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -161,6 +159,7 @@
             this.密码数 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.考勤记录 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.序列号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -179,11 +178,10 @@
             this.panel2.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -196,7 +194,7 @@
             this.人脸注册.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.人脸注册.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold);
             this.人脸注册.ImageKey = "(无)";
-            this.人脸注册.Location = new System.Drawing.Point(-1, 392);
+            this.人脸注册.Location = new System.Drawing.Point(-1, 365);
             this.人脸注册.Name = "人脸注册";
             this.人脸注册.Size = new System.Drawing.Size(141, 38);
             this.人脸注册.TabIndex = 0;
@@ -211,7 +209,7 @@
             this.面部识别.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.面部识别.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold);
             this.面部识别.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.面部识别.Location = new System.Drawing.Point(-1, 347);
+            this.面部识别.Location = new System.Drawing.Point(0, 320);
             this.面部识别.Name = "面部识别";
             this.面部识别.Size = new System.Drawing.Size(141, 39);
             this.面部识别.TabIndex = 1;
@@ -219,20 +217,13 @@
             this.面部识别.UseVisualStyleBackColor = false;
             this.面部识别.Click += new System.EventHandler(this.button2_Click);
             // 
-            // 指纹识别
-            // 
-            this.指纹识别.Location = new System.Drawing.Point(0, 0);
-            this.指纹识别.Name = "指纹识别";
-            this.指纹识别.Size = new System.Drawing.Size(75, 23);
-            this.指纹识别.TabIndex = 1;
-            // 
             // 管理人员
             // 
             this.管理人员.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.管理人员.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("管理人员.BackgroundImage")));
             this.管理人员.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.管理人员.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold);
-            this.管理人员.Location = new System.Drawing.Point(-1, 436);
+            this.管理人员.Location = new System.Drawing.Point(0, 398);
             this.管理人员.Name = "管理人员";
             this.管理人员.Size = new System.Drawing.Size(138, 43);
             this.管理人员.TabIndex = 3;
@@ -246,7 +237,7 @@
             this.查询信息.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("查询信息.BackgroundImage")));
             this.查询信息.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.查询信息.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold);
-            this.查询信息.Location = new System.Drawing.Point(0, 485);
+            this.查询信息.Location = new System.Drawing.Point(-1, 447);
             this.查询信息.Name = "查询信息";
             this.查询信息.Size = new System.Drawing.Size(141, 46);
             this.查询信息.TabIndex = 4;
@@ -667,124 +658,132 @@
             this.退出系统});
             this.toolStrip1.Location = new System.Drawing.Point(0, 26);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1135, 67);
+            this.toolStrip1.Size = new System.Drawing.Size(1135, 80);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // 人员维护
             // 
-            this.人员维护.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.人员维护.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.人员维护.BackColor = System.Drawing.Color.Transparent;
+            this.人员维护.Font = new System.Drawing.Font("华文楷体", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.人员维护.Image = ((System.Drawing.Image)(resources.GetObject("人员维护.Image")));
             this.人员维护.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.人员维护.Name = "人员维护";
-            this.人员维护.Size = new System.Drawing.Size(64, 64);
+            this.人员维护.Size = new System.Drawing.Size(64, 77);
             this.人员维护.Text = "人员维护";
+            this.人员维护.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.人员维护.Click += new System.EventHandler(this.人员维护_Click);
             // 
             // 出勤记录
             // 
-            this.出勤记录.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.出勤记录.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.出勤记录.BackColor = System.Drawing.Color.Transparent;
+            this.出勤记录.Font = new System.Drawing.Font("华文楷体", 8.999999F);
             this.出勤记录.Image = ((System.Drawing.Image)(resources.GetObject("出勤记录.Image")));
             this.出勤记录.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.出勤记录.Name = "出勤记录";
-            this.出勤记录.Size = new System.Drawing.Size(64, 64);
+            this.出勤记录.Size = new System.Drawing.Size(64, 77);
             this.出勤记录.Text = "出勤记录";
+            this.出勤记录.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.出勤记录.Click += new System.EventHandler(this.出勤记录_Click);
             // 
             // 统计报表
             // 
-            this.统计报表.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.统计报表.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.统计报表.BackColor = System.Drawing.Color.Transparent;
+            this.统计报表.Font = new System.Drawing.Font("华文楷体", 8.999999F);
             this.统计报表.Image = ((System.Drawing.Image)(resources.GetObject("统计报表.Image")));
             this.统计报表.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.统计报表.Name = "统计报表";
-            this.统计报表.Size = new System.Drawing.Size(64, 64);
+            this.统计报表.Size = new System.Drawing.Size(64, 77);
             this.统计报表.Text = "统计报表";
+            this.统计报表.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.统计报表.Click += new System.EventHandler(this.统计报表_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 67);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 80);
             // 
             // 设备维护
             // 
-            this.设备维护.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.设备维护.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.设备维护.BackColor = System.Drawing.Color.Transparent;
+            this.设备维护.Font = new System.Drawing.Font("华文楷体", 8.999999F);
             this.设备维护.Image = ((System.Drawing.Image)(resources.GetObject("设备维护.Image")));
             this.设备维护.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.设备维护.Name = "设备维护";
-            this.设备维护.Size = new System.Drawing.Size(64, 64);
+            this.设备维护.Size = new System.Drawing.Size(64, 77);
             this.设备维护.Text = "设备维护";
+            this.设备维护.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.设备维护.Click += new System.EventHandler(this.设备维护_Click);
             // 
             // 删除设备
             // 
-            this.删除设备.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.删除设备.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.删除设备.BackColor = System.Drawing.Color.Transparent;
+            this.删除设备.Font = new System.Drawing.Font("华文楷体", 8.999999F);
             this.删除设备.Image = ((System.Drawing.Image)(resources.GetObject("删除设备.Image")));
             this.删除设备.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.删除设备.Name = "删除设备";
-            this.删除设备.Size = new System.Drawing.Size(64, 64);
+            this.删除设备.Size = new System.Drawing.Size(64, 77);
             this.删除设备.Text = "删除设备";
+            this.删除设备.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 67);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 80);
             // 
             // 连接设备
             // 
-            this.连接设备.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.连接设备.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.连接设备.BackColor = System.Drawing.Color.Transparent;
+            this.连接设备.Font = new System.Drawing.Font("华文楷体", 8.999999F);
             this.连接设备.Image = ((System.Drawing.Image)(resources.GetObject("连接设备.Image")));
             this.连接设备.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.连接设备.Name = "连接设备";
-            this.连接设备.Size = new System.Drawing.Size(64, 64);
+            this.连接设备.Size = new System.Drawing.Size(64, 77);
             this.连接设备.Text = "连接设备";
+            this.连接设备.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // 断开设备
             // 
-            this.断开设备.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.断开设备.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.断开设备.BackColor = System.Drawing.Color.Transparent;
+            this.断开设备.Font = new System.Drawing.Font("华文楷体", 8.999999F);
             this.断开设备.Image = ((System.Drawing.Image)(resources.GetObject("断开设备.Image")));
             this.断开设备.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.断开设备.Name = "断开设备";
-            this.断开设备.Size = new System.Drawing.Size(64, 64);
+            this.断开设备.Size = new System.Drawing.Size(64, 77);
             this.断开设备.Text = "断开设备";
+            this.断开设备.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 67);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 80);
             // 
             // 退出系统
             // 
-            this.退出系统.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.退出系统.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.退出系统.BackColor = System.Drawing.Color.Transparent;
+            this.退出系统.Font = new System.Drawing.Font("华文楷体", 8.999999F);
             this.退出系统.Image = ((System.Drawing.Image)(resources.GetObject("退出系统.Image")));
             this.退出系统.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.退出系统.Name = "退出系统";
-            this.退出系统.Size = new System.Drawing.Size(64, 64);
+            this.退出系统.Size = new System.Drawing.Size(64, 77);
             this.退出系统.Text = "退出系统";
             this.退出系统.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.退出系统.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.退出系统.Click += new System.EventHandler(this.退出系统_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.treeView1);
-            this.panel1.Controls.Add(this.指纹识别);
             this.panel1.Controls.Add(this.面部识别);
             this.panel1.Controls.Add(this.人脸注册);
             this.panel1.Controls.Add(this.查询信息);
             this.panel1.Controls.Add(this.管理人员);
-            this.panel1.Location = new System.Drawing.Point(0, 96);
+            this.panel1.Location = new System.Drawing.Point(0, 121);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 539);
+            this.panel1.Size = new System.Drawing.Size(230, 514);
             this.panel1.TabIndex = 8;
             // 
             // button2
@@ -799,58 +798,61 @@
             // 
             // treeView1
             // 
-            this.treeView1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.treeView1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.treeView1.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Bold);
+            this.treeView1.HotTracking = true;
             this.treeView1.LineColor = System.Drawing.Color.Maroon;
-            this.treeView1.Location = new System.Drawing.Point(3, 12);
+            this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode73.Name = "导入考勤数据";
-            treeNode73.Text = "导入考勤数据";
-            treeNode74.Name = "导出考勤数据";
-            treeNode74.Text = "导出考勤数据";
-            treeNode75.Name = "备份数据库";
-            treeNode75.Text = "备份数据库";
-            treeNode76.Checked = true;
-            treeNode76.ForeColor = System.Drawing.Color.Blue;
-            treeNode76.Name = "节点0";
-            treeNode76.Text = "数据管理";
-            treeNode77.Name = "从设备下载记录数据";
-            treeNode77.Text = "从设备下载记录数据";
-            treeNode78.Name = "从设备下载人员信息";
-            treeNode78.Text = "从设备下载记录数据";
-            treeNode79.Name = "上传人员信息到设备";
-            treeNode79.Text = "从设备下载记录数据";
-            treeNode80.Name = "设备管理";
-            treeNode80.Text = "设备管理";
-            treeNode81.ForeColor = System.Drawing.Color.Blue;
-            treeNode81.Name = "有关设备操作";
-            treeNode81.Text = "有关设备操作";
-            treeNode82.Name = "管理员设置";
-            treeNode82.Text = "管理员设置";
-            treeNode83.Name = "人员维护";
-            treeNode83.Text = "人员维护";
-            treeNode84.Name = "数据库设置";
-            treeNode84.Text = "数据库设置";
-            treeNode85.Name = "部门表";
-            treeNode85.Text = "部门表";
-            treeNode86.ForeColor = System.Drawing.Color.Blue;
-            treeNode86.Name = "设备/维护";
-            treeNode86.Text = "设备/维护";
-            treeNode87.Name = "时间段维护";
-            treeNode87.Text = "时间段维护";
-            treeNode88.Name = "班次管理";
-            treeNode88.Text = "班次管理";
-            treeNode89.Name = "考勤规则";
-            treeNode89.Text = "考勤规则";
-            treeNode90.ForeColor = System.Drawing.Color.Blue;
-            treeNode90.Name = "人员排班";
-            treeNode90.Text = "人员排班";
+            treeNode19.Name = "导入考勤数据";
+            treeNode19.Text = "导入考勤数据";
+            treeNode20.Name = "导出考勤数据";
+            treeNode20.Text = "导出考勤数据";
+            treeNode21.Name = "备份数据库";
+            treeNode21.Text = "备份数据库";
+            treeNode22.Checked = true;
+            treeNode22.ForeColor = System.Drawing.Color.Blue;
+            treeNode22.Name = "节点0";
+            treeNode22.SelectedImageIndex = -2;
+            treeNode22.StateImageKey = "(无)";
+            treeNode22.Text = "数据管理";
+            treeNode23.Name = "从设备下载记录数据";
+            treeNode23.Text = "从设备下载记录数据";
+            treeNode24.Name = "从设备下载人员信息";
+            treeNode24.Text = "从设备下载记录数据";
+            treeNode25.Name = "上传人员信息到设备";
+            treeNode25.Text = "从设备下载记录数据";
+            treeNode26.Name = "设备管理";
+            treeNode26.Text = "设备管理";
+            treeNode27.ForeColor = System.Drawing.Color.Blue;
+            treeNode27.Name = "有关设备操作";
+            treeNode27.Text = "有关设备操作";
+            treeNode28.Name = "管理员设置";
+            treeNode28.Text = "管理员设置";
+            treeNode29.Name = "人员维护";
+            treeNode29.Text = "人员维护";
+            treeNode30.Name = "数据库设置";
+            treeNode30.Text = "数据库设置";
+            treeNode31.Name = "部门表";
+            treeNode31.Text = "部门表";
+            treeNode32.ForeColor = System.Drawing.Color.Blue;
+            treeNode32.Name = "设备/维护";
+            treeNode32.Text = "设备/维护";
+            treeNode33.Name = "时间段维护";
+            treeNode33.Text = "时间段维护";
+            treeNode34.Name = "班次管理";
+            treeNode34.Text = "班次管理";
+            treeNode35.Name = "考勤规则";
+            treeNode35.Text = "考勤规则";
+            treeNode36.ForeColor = System.Drawing.Color.Blue;
+            treeNode36.Name = "人员排班";
+            treeNode36.Text = "人员排班";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode76,
-            treeNode81,
-            treeNode86,
-            treeNode90});
-            this.treeView1.Size = new System.Drawing.Size(203, 329);
+            treeNode22,
+            treeNode27,
+            treeNode32,
+            treeNode36});
+            this.treeView1.Size = new System.Drawing.Size(224, 311);
             this.treeView1.TabIndex = 0;
             this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
             // 
@@ -893,9 +895,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.toolStrip2);
-            this.panel2.Location = new System.Drawing.Point(236, 96);
+            this.panel2.Location = new System.Drawing.Point(252, 121);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(912, 29);
+            this.panel2.Size = new System.Drawing.Size(879, 30);
             this.panel2.TabIndex = 9;
             // 
             // toolStrip2
@@ -905,8 +907,8 @@
             this.toolStripLabel1});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(912, 25);
-            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Size = new System.Drawing.Size(879, 25);
+            this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // toolStripLabel1
@@ -919,31 +921,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.splitContainer1);
-            this.panel3.Location = new System.Drawing.Point(236, 131);
+            this.panel3.Location = new System.Drawing.Point(245, 157);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(922, 504);
+            this.panel3.Size = new System.Drawing.Size(886, 478);
             this.panel3.TabIndex = 10;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Panel1MinSize = 50;
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView3);
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView2);
-            this.splitContainer1.Panel2MinSize = 50;
-            this.splitContainer1.Size = new System.Drawing.Size(892, 498);
-            this.splitContainer1.SplitterDistance = 237;
-            this.splitContainer1.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -964,10 +947,10 @@
             this.密码数,
             this.考勤记录,
             this.序列号});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(950, 566);
+            this.dataGridView1.Size = new System.Drawing.Size(880, 294);
             this.dataGridView1.TabIndex = 0;
             // 
             // 设置名称
@@ -1046,16 +1029,36 @@
             this.序列号.HeaderText = "序列号";
             this.序列号.Name = "序列号";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(3, 100);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer1.Panel1MinSize = 50;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dataGridView3);
+            this.splitContainer1.Panel2.Controls.Add(this.dataGridView2);
+            this.splitContainer1.Panel2MinSize = 50;
+            this.splitContainer1.Size = new System.Drawing.Size(892, 401);
+            this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.TabIndex = 0;
+            // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn4});
-            this.dataGridView3.Location = new System.Drawing.Point(653, 3);
+            this.dataGridView3.Location = new System.Drawing.Point(649, 3);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.Size = new System.Drawing.Size(263, 530);
+            this.dataGridView3.Size = new System.Drawing.Size(231, 321);
             this.dataGridView3.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -1078,10 +1081,10 @@
             this.时间,
             this.设备名称,
             this.对比方式});
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(-1, 4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(644, 599);
+            this.dataGridView2.Size = new System.Drawing.Size(644, 320);
             this.dataGridView2.TabIndex = 0;
             // 
             // 序号
@@ -1146,11 +1149,10 @@
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -1162,7 +1164,6 @@
 
         private System.Windows.Forms.Button 人脸注册;
         private System.Windows.Forms.Button 面部识别;
-        private System.Windows.Forms.Button 指纹识别;
         private System.Windows.Forms.Button 管理人员;
         private System.Windows.Forms.Button 查询信息;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -1227,8 +1228,6 @@
         private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
         private System.Windows.Forms.ToolStripContentPanel ContentPanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -1273,6 +1272,8 @@
         private System.Windows.Forms.Button button2;
         private Admin ad = null;
         private bool flag = false;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 
 }

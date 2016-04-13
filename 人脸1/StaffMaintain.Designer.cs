@@ -609,7 +609,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Controls.Add(this.button7);
             this.tabPage3.Controls.Add(this.groupBox4);
@@ -778,14 +778,14 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        public System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.ToolStripButton toolStripButton10;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton toolStripButton11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
@@ -811,7 +811,7 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button button6;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button5;
